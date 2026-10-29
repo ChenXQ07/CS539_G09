@@ -24,23 +24,23 @@ The system has two connected neural components followed by a deterministic recon
 
 ~~~mermaid
 flowchart LR
-    D["P1 Data preparation<br/>IRRG patches: B x 3 x 256 x 256"] --> E["P2 ResNet18 encoder<br/>Pretrained and fine-tuned"]
-    E -->|Multiscale features| F["P3 UNetFormer decoder<br/>Random initialization and team training"]
-    F -->|"Logits: B x 6 x 256 x 256"| R["P4 Window fusion and reconstruction<br/>Deterministic; no trainable parameters"]
+    D["Data preparation<br/>IRRG patches: B x 3 x 256 x 256"] --> E["ResNet18 encoder<br/>Pretrained and fine-tuned"]
+    E -->|Multiscale features| F["UNetFormer decoder<br/>Random initialization and team training"]
+    F -->|"Logits: B x 6 x 256 x 256"| R["Window fusion and reconstruction<br/>Deterministic; no trainable parameters"]
     D -. Patch coordinates and original tile size .-> R
     R --> O["Class map: H x W<br/>Six classes"]
 ~~~
 
 | Stage | Input | Output and next consumer | Training status |
 | --- | --- | --- | --- |
-| P1 Data preparation | Paired IRRG tiles and reference labels | Aligned image/label patches for training; image patches for the encoder; coordinates and original dimensions for reconstruction | Data processing, no trainable parameters |
-| P2 ResNet18 encoder | B x 3 x 256 x 256 image tensor | Feature maps of 64 x 64 x 64, 128 x 32 x 32, 256 x 16 x 16, and 512 x 8 x 8, passed to the decoder | Pretrained initialization; fine-tuned by the team |
-| P3 UNetFormer decoder | Multiscale encoder features | B x 6 x 256 x 256 class logits, passed to reconstruction during inference | Random initialization; trained by the team |
-| P4 Window fusion and reconstruction | Patch logits, coordinates, and original tile dimensions | H x W class map for evaluation and visualization | Deterministic; no trainable parameters |
+| Data preparation | Paired IRRG tiles and reference labels | Aligned image/label patches for training; image patches for the encoder; coordinates and original dimensions for reconstruction | Data processing, no trainable parameters |
+| ResNet18 encoder | B x 3 x 256 x 256 image tensor | Feature maps of 64 x 64 x 64, 128 x 32 x 32, 256 x 16 x 16, and 512 x 8 x 8, passed to the decoder | Pretrained initialization; fine-tuned by the team |
+| UNetFormer decoder | Multiscale encoder features | B x 6 x 256 x 256 class logits, passed to reconstruction during inference | Random initialization; trained by the team |
+| Window fusion and reconstruction | Patch logits, coordinates, and original tile dimensions | H x W class map for evaluation and visualization | Deterministic; no trainable parameters |
 
 B is batch size. Encoder feature shapes use C x H x W and omit the batch dimension. The decoder includes three global-local attention blocks, weighted feature fusion and skip connections, feature refinement, and an output head. Reconstruction places predictions at their recorded coordinates, sums overlapping class logits, and applies pixelwise argmax.
 
-P2 and P3 are parts of one jointly trained network. Workspace ownership does not imply independent training. Course-topic labels will be confirmed against the course syllabus.
+The encoder and decoder are parts of one jointly trained network. Architecture stages are distinct from the team workspaces below. Course-topic labels will be confirmed against the course syllabus.
 
 ## Data preparation
 
@@ -75,15 +75,15 @@ Development mIoU will guide checkpoint selection. Final-evaluation tiles will be
 
 ## Repository organization and responsibilities
 
-| Workspace | Proposed responsibility | Main deliverables |
+| Workspace | Main responsibility | Deliverables |
 | --- | --- | --- |
-| [P1/](P1/) | Data preparation | Data access and label checks, tile partitions, aligned crops, and reconstruction metadata |
-| [P2/](P2/) | ResNet18 encoder | Pretrained encoder setup, multiscale feature interface checks, and fine-tuning verification |
-| [P3/](P3/) | UNetFormer decoder | Decoder adaptation, output and loss checks, and joint training with P2 |
-| [P4/](P4/) | Window fusion and reconstruction | Sliding-window inference, overlapping-logit fusion, and full-tile class maps |
-| [final/](final/) | Shared integration | Reviewed code, evaluation outputs, report, and slides |
+| [P1/](P1/) | Data preparation | Data access instructions, preprocessing, and partition records |
+| [P2/](P2/) | Model implementation and training | Model code, training configurations, and run summaries |
+| [P3/](P3/) | Experimental evaluation | Baseline and controlled comparison, metrics, and visual results |
+| [P4/](P4/) | Project integration and reporting | Integration notes, report contributions, and presentation materials |
+| [final/](final/) | Shared integrated deliverable | Reviewed code, evaluation outputs, and presentation materials |
 
-Individual owners will be assigned by the team. Evaluation, integration, and reporting are shared responsibilities. Keep the Canvas-name/GitHub-account identity mapping in the private Canvas PDF.
+Members will be assigned to P1-P4 by the team. Keep the Canvas-name/GitHub-account identity mapping in the private Canvas PDF.
 
 ## Timeline
 
