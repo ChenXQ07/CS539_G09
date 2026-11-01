@@ -75,15 +75,15 @@ Development mIoU will guide checkpoint selection. Final-evaluation tiles will be
 
 ## Repository organization and responsibilities
 
-| Workspace | Main responsibility | Deliverables |
+| Workspace | GitHub owner | Responsibility and deliverable |
 | --- | --- | --- |
-| [P1/](P1/) | Data preparation | Data access instructions, preprocessing, and partition records |
-| [P2/](P2/) | Model implementation and training | Model code, training configurations, and run summaries |
-| [P3/](P3/) | Experimental evaluation | Baseline and controlled comparison, metrics, and visual results |
-| [P4/](P4/) | Project integration and reporting | Integration notes, report contributions, and presentation materials |
-| [final/](final/) | Shared integrated deliverable | Reviewed code, evaluation outputs, and presentation materials |
+| [P1/](https://github.com/ChenXQ07/CS539_G09/tree/main/P1) | @JialiangSun1 | Data preparation and quality checks. Deliver verified image-label pairs, tile split records, and reproducible preprocessing code. |
+| [P2/](https://github.com/ChenXQ07/CS539_G09/tree/main/P2) | @amchin-svg | ResNet18 encoder and training coordination; coordinate shared decoder integration with P3-P4. Deliver encoder code, training configurations, and checkpoints. |
+| [P3/](https://github.com/ChenXQ07/CS539_G09/tree/main/P3) | @KyotoSakura | Global-context branch and experimental evaluation. Deliver branch code, baseline comparisons, metrics, and diagnostic figures. |
+| [P4/](https://github.com/ChenXQ07/CS539_G09/tree/main/P4) | @ChenXQ07 | Local-feature branch and project integration/reporting. Deliver branch code, pipeline checks, and coordinated report and slides. |
+| [final/](https://github.com/ChenXQ07/CS539_G09/tree/main/final) | All members | Reviewed integrated code, evaluation outputs, report, and presentation materials. |
 
-Members will be assigned to P1-P4 by the team. Keep the Canvas-name/GitHub-account identity mapping in the private Canvas PDF.
+P2 coordinates training and shared decoder integration with P3-P4. The global-context and local-feature branches are responsibilities within the shared UNetFormer decoder. Keep the Canvas-name/GitHub-account identity mapping in the private Canvas PDF.
 
 ## Timeline
 
