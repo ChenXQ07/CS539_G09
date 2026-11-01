@@ -1,5 +1,15 @@
-# P4 Project Integration and Reporting
+# P4 Local-Feature Branch and Project Integration
 
-Owner: to be assigned by the team.
+**Owner:** @ChenXQ07
 
-Maintain the repository structure, integrate reviewed contributions, and coordinate the report and slides. Deliver integration notes, submission checks, and presentation materials. Keep private identity information in the Canvas submission.
+## Responsibility
+
+Local-feature branch and project integration/reporting.
+
+## Deliverables
+
+- Local-feature branch code
+- Pipeline checks
+- Coordinated report and slides
+
+Coordinate shared decoder integration with P2 and P3, integrate team contributions, and organize the report and presentation materials.
