@@ -1,5 +1,15 @@
-# P1 Data Preparation
+# P1 Data Preparation and Quality Checks
 
-Owner: to be assigned by the team.
+**Owner:** @JialiangSun1
 
-Organize data access, preprocessing, and data partitions. Deliver data access instructions, preprocessing scripts, and a record of the agreed tile partitions. Keep downloaded data outside the repository.
+## Responsibility
+
+Data preparation and quality checks.
+
+## Deliverables
+
+- Verified image-label pairs
+- Tile split records
+- Reproducible preprocessing code
+
+Provide the verified data and split records for model training and evaluation.
