@@ -1,5 +1,15 @@
-# P2 Model Implementation and Training
+# P2 ResNet18 Encoder and Training Coordination
 
-Owner: to be assigned by the team.
+**Owner:** @amchin-svg
 
-Adapt the supplied RSSS_code structure and manage model training. Deliver model code, environment instructions, training configurations, and run summaries. Store large checkpoints outside Git.
+## Responsibility
+
+ResNet18 encoder and training coordination; coordinate shared decoder integration with P3-P4.
+
+## Deliverables
+
+- Encoder code
+- Training configurations
+- Model checkpoints
+
+Coordinate training and shared decoder integration with the global-context branch in P3 and the local-feature branch in P4.
