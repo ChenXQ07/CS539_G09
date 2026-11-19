@@ -1,0 +1,3539 @@
+ViT, Train, Vaihingen
+Args: {"model": "ViT", "mode": "Train", "epochs": 50, "milestones": [25, 35, 45], "lr": 0.01, "val_interval": 500, "val_stride": 32, "iters_per_epoch": null, "amp": false, "weights": null, "seed": 0, "tag": ""}
+Log file: log\ViT_Vaihingen_Train_20261118_172536.log
+Device: NVIDIA GeForce RTX 5080
+Params: 93766086 (93.77 M)
+training :  12, testing :  4, Stride_Size :  32 , BATCH_SIZE :  10
+[17:25:44] Train (epoch 1/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 1.799604	Accuracy: 13.39	Elapsed: 0.1 min
+[17:25:57] Train (epoch 1/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.889421	Accuracy: 44.04	Elapsed: 0.3 min
+[17:26:07] Train (epoch 1/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.589805	Accuracy: 72.81	Elapsed: 0.5 min
+[17:26:16] Train (epoch 1/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.431873	Accuracy: 78.24	Elapsed: 0.7 min
+[17:26:26] Train (epoch 1/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.405436	Accuracy: 82.77	Elapsed: 0.8 min
+Confusion matrix :
+[[4044217  455265   70352  189085   39589    5857]
+ [ 103728 5264154   23639   29519    1098     809]
+ [  93566  181827  940431 1680267     649    5970]
+ [  20728   18976   20159 4332673     127      97]
+ [  39854   14843      29    1350   92601       0]
+ [      0    6183       0      33       0       0]]
+17677675 pixels processed
+Total accuracy : 83.01
+roads: 0.8418
+buildings: 0.9707
+low veg.: 0.3240
+trees: 0.9863
+cars: 0.6228
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8882
+buildings: 0.9264
+low veg.: 0.4753
+trees: 0.8155
+cars: 0.6550
+clutter: 0.0000
+mean F1Score: 0.7521
+---
+Kappa: 0.7683
+[0.79889855 0.86297027 0.31172211 0.68848933 0.48701483 0.        ]
+mean MIoU: 0.6298
+---
+Validation @ epoch 1 iter 500: mIoU 0.6298 (65.4 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.6298)
+[17:27:41] Train (epoch 1/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.481622	Accuracy: 87.83	Elapsed: 2.1 min
+[17:27:51] Train (epoch 1/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.350094	Accuracy: 81.50	Elapsed: 2.2 min
+[17:28:00] Train (epoch 1/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.406273	Accuracy: 87.14	Elapsed: 2.4 min
+[17:28:10] Train (epoch 1/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.278483	Accuracy: 70.16	Elapsed: 2.6 min
+[17:28:19] Train (epoch 1/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.323144	Accuracy: 81.74	Elapsed: 2.7 min
+Confusion matrix :
+[[4474358  120178  135545   54483   19727      74]
+ [ 214144 5160965   43426    3478     934       0]
+ [ 141951   97956 2335786  326752     265       0]
+ [  48263   14919  353593 3975876     109       0]
+ [  38537    2954      15     545  105235    1391]
+ [      0    6211       5       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.81
+roads: 0.9313
+buildings: 0.9517
+low veg.: 0.8047
+trees: 0.9051
+cars: 0.7078
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9205
+buildings: 0.9534
+low veg.: 0.8095
+trees: 0.9084
+cars: 0.7655
+clutter: 0.0000
+mean F1Score: 0.8715
+---
+Kappa: 0.8762
+[0.8527037  0.91099994 0.67993773 0.83211825 0.6200799  0.        ]
+mean MIoU: 0.7792
+---
+Validation @ epoch 1 iter 1000: mIoU 0.7792 (62.0 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.7792)
+[17:29:31] Train (epoch 2/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.311347	Accuracy: 81.58	Elapsed: 3.9 min
+[17:29:41] Train (epoch 2/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.210903	Accuracy: 92.81	Elapsed: 4.1 min
+[17:29:50] Train (epoch 2/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.311454	Accuracy: 85.03	Elapsed: 4.2 min
+[17:30:00] Train (epoch 2/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.475963	Accuracy: 85.99	Elapsed: 4.4 min
+[17:30:09] Train (epoch 2/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.270006	Accuracy: 90.19	Elapsed: 4.5 min
+Confusion matrix :
+[[4559805   75546  105437   30003   32140    1434]
+ [ 339176 5054958   24137    3232    1444       0]
+ [ 246710   74969 2283949  296558     524       0]
+ [  92400   10705  356504 3932768     383       0]
+ [  24123     417       4     157  123976       0]
+ [      0    6203      13       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.26
+roads: 0.9491
+buildings: 0.9321
+low veg.: 0.7868
+trees: 0.8953
+cars: 0.8339
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9059
+buildings: 0.9497
+low veg.: 0.8052
+trees: 0.9087
+cars: 0.8073
+clutter: 0.0000
+mean F1Score: 0.8754
+---
+Kappa: 0.8688
+[0.82803562 0.90415857 0.67396885 0.83273544 0.67684312 0.        ]
+mean MIoU: 0.7831
+---
+Validation @ epoch 2 iter 1500: mIoU 0.7831 (61.9 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.7831)
+[17:31:21] Train (epoch 2/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.484015	Accuracy: 75.33	Elapsed: 5.7 min
+[17:31:31] Train (epoch 2/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.243966	Accuracy: 96.89	Elapsed: 5.9 min
+[17:31:40] Train (epoch 2/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.296657	Accuracy: 81.81	Elapsed: 6.1 min
+[17:31:50] Train (epoch 2/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.331946	Accuracy: 96.49	Elapsed: 6.2 min
+[17:31:59] Train (epoch 2/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.220442	Accuracy: 88.93	Elapsed: 6.4 min
+Confusion matrix :
+[[4531097  102045  110848   42551   17824       0]
+ [ 262960 5131769   24138    3493     587       0]
+ [ 206382  106820 2218711  370424     373       0]
+ [  56568   15759  319928 4000329     176       0]
+ [  34451    4827      36     302  109061       0]
+ [      0    6209       7       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.46
+roads: 0.9431
+buildings: 0.9463
+low veg.: 0.7644
+trees: 0.9107
+cars: 0.7335
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9158
+buildings: 0.9512
+low veg.: 0.7958
+trees: 0.9081
+cars: 0.7883
+clutter: 0.0000
+mean F1Score: 0.8718
+---
+Kappa: 0.8713
+[0.84460921 0.90689617 0.66078947 0.8317505  0.65057833 0.        ]
+mean MIoU: 0.7789
+---
+Validation @ epoch 2 iter 2000: mIoU 0.7789 (62.0 s)  (best 0.7831)
+[17:33:11] Train (epoch 3/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.231097	Accuracy: 91.49	Elapsed: 7.6 min
+[17:33:20] Train (epoch 3/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.279381	Accuracy: 89.11	Elapsed: 7.7 min
+[17:33:30] Train (epoch 3/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.291701	Accuracy: 79.88	Elapsed: 7.9 min
+[17:33:39] Train (epoch 3/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.238983	Accuracy: 87.75	Elapsed: 8.0 min
+[17:33:49] Train (epoch 3/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.265402	Accuracy: 86.18	Elapsed: 8.2 min
+Confusion matrix :
+[[4371358  125957  216110   66373   23717     850]
+ [ 148638 5199050   63173   10696    1390       0]
+ [  82142   37301 2351131  431405     731       0]
+ [  38964    4335  254112 4095085     264       0]
+ [  25343    1331      17     378  121576      32]
+ [      0    5027    1189       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.29
+roads: 0.9099
+buildings: 0.9587
+low veg.: 0.8100
+trees: 0.9322
+cars: 0.8177
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9231
+buildings: 0.9631
+low veg.: 0.8124
+trees: 0.9104
+cars: 0.8205
+clutter: 0.0000
+mean F1Score: 0.8859
+---
+Kappa: 0.8829
+[0.85722113 0.92891634 0.68400299 0.83545678 0.69559844 0.        ]
+mean MIoU: 0.8002
+---
+Validation @ epoch 3 iter 2500: mIoU 0.8002 (62.1 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.8002)
+[17:35:01] Train (epoch 3/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.269480	Accuracy: 94.78	Elapsed: 9.4 min
+[17:35:10] Train (epoch 3/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.223950	Accuracy: 92.59	Elapsed: 9.6 min
+[17:35:20] Train (epoch 3/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.234437	Accuracy: 90.82	Elapsed: 9.7 min
+[17:35:29] Train (epoch 3/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.300117	Accuracy: 79.18	Elapsed: 9.9 min
+[17:35:39] Train (epoch 3/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.293429	Accuracy: 92.53	Elapsed: 10.0 min
+Confusion matrix :
+[[4448692  117194  149753   54698   29776    4252]
+ [ 140856 5237029   37286    6703    1073       0]
+ [ 157194   52889 2395950  295872     805       0]
+ [  45559    6218  398866 3941877     240       0]
+ [  20535    1036      31     365  126710       0]
+ [      0    5590     626       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.36
+roads: 0.9260
+buildings: 0.9657
+low veg.: 0.8254
+trees: 0.8974
+cars: 0.8523
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9252
+buildings: 0.9660
+low veg.: 0.8142
+trees: 0.9070
+cars: 0.8247
+clutter: 0.0000
+mean F1Score: 0.8874
+---
+Kappa: 0.8838
+[0.86073024 0.93420384 0.68666186 0.82979931 0.70171844 0.        ]
+mean MIoU: 0.8026
+---
+Validation @ epoch 3 iter 3000: mIoU 0.8026 (61.9 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.8026)
+[17:36:50] Train (epoch 4/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.201600	Accuracy: 86.33	Elapsed: 11.2 min
+[17:37:00] Train (epoch 4/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.184640	Accuracy: 92.06	Elapsed: 11.4 min
+[17:37:09] Train (epoch 4/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.304568	Accuracy: 91.24	Elapsed: 11.5 min
+[17:37:19] Train (epoch 4/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.215752	Accuracy: 94.78	Elapsed: 11.7 min
+[17:37:28] Train (epoch 4/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.218907	Accuracy: 87.44	Elapsed: 11.9 min
+Confusion matrix :
+[[4532292   86385  114142   55402   15533     611]
+ [ 179993 5193825   40076    7924    1129       0]
+ [ 206381   46387 2197247  452483     212       0]
+ [  61880    4606  237563 4088599     112       0]
+ [  30569    1249       2     291  116463     103]
+ [      0    5674     542       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.24
+roads: 0.9434
+buildings: 0.9577
+low veg.: 0.7570
+trees: 0.9308
+cars: 0.7833
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9235
+buildings: 0.9653
+low veg.: 0.8001
+trees: 0.9088
+cars: 0.8256
+clutter: 0.0000
+mean F1Score: 0.8847
+---
+Kappa: 0.8818
+[0.85787066 0.93292503 0.66683571 0.83290194 0.70301154 0.        ]
+mean MIoU: 0.7987
+---
+Validation @ epoch 4 iter 3500: mIoU 0.7987 (62.0 s)  (best 0.8026)
+[17:38:40] Train (epoch 4/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.183058	Accuracy: 88.34	Elapsed: 13.1 min
+[17:38:49] Train (epoch 4/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.305752	Accuracy: 97.00	Elapsed: 13.2 min
+[17:38:59] Train (epoch 4/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.219268	Accuracy: 87.47	Elapsed: 13.4 min
+[17:39:08] Train (epoch 4/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.310351	Accuracy: 81.40	Elapsed: 13.5 min
+[17:39:18] Train (epoch 4/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.180136	Accuracy: 92.61	Elapsed: 13.7 min
+Confusion matrix :
+[[4417810  105220  213572   51138   14574    2051]
+ [ 105532 5255318   53632    8044     421       0]
+ [  91774   62377 2454237  294160     162       0]
+ [  36520    3737  399057 3953343     103       0]
+ [  33078    3472      39     442  111646       0]
+ [      2    4968    1246       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.60
+roads: 0.9195
+buildings: 0.9691
+low veg.: 0.8455
+trees: 0.9000
+cars: 0.7509
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9311
+buildings: 0.9680
+low veg.: 0.8148
+trees: 0.9088
+cars: 0.8103
+clutter: 0.0000
+mean F1Score: 0.8866
+---
+Kappa: 0.8871
+[0.87114453 0.93799388 0.68741205 0.83288873 0.68102991 0.        ]
+mean MIoU: 0.8021
+---
+Validation @ epoch 4 iter 4000: mIoU 0.8021 (61.9 s)  (best 0.8026)
+[17:40:29] Train (epoch 5/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.186941	Accuracy: 96.11	Elapsed: 14.9 min
+[17:40:39] Train (epoch 5/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.208167	Accuracy: 77.50	Elapsed: 15.0 min
+[17:40:48] Train (epoch 5/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.278416	Accuracy: 88.07	Elapsed: 15.2 min
+[17:40:58] Train (epoch 5/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.240650	Accuracy: 88.31	Elapsed: 15.4 min
+[17:41:07] Train (epoch 5/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.242781	Accuracy: 91.57	Elapsed: 15.5 min
+Confusion matrix :
+[[4481701  132173  115808   55581   18215     887]
+ [ 207589 5159644   46963    8006     745       0]
+ [ 233919   78970 2140049  449256     516       0]
+ [  59248    9514  240437 4083383     178       0]
+ [  29349    2912       3     377  116036       0]
+ [      5    5272     939       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.40
+roads: 0.9328
+buildings: 0.9514
+low veg.: 0.7373
+trees: 0.9296
+cars: 0.7805
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9131
+buildings: 0.9545
+low veg.: 0.7858
+trees: 0.9085
+cars: 0.8161
+clutter: 0.0000
+mean F1Score: 0.8756
+---
+Kappa: 0.8705
+[0.8401391  0.91292242 0.6471544  0.83232769 0.68933233 0.        ]
+mean MIoU: 0.7844
+---
+Validation @ epoch 5 iter 4500: mIoU 0.7844 (62.0 s)  (best 0.8026)
+[17:42:19] Train (epoch 5/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.240769	Accuracy: 95.20	Elapsed: 16.7 min
+[17:42:28] Train (epoch 5/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.232952	Accuracy: 78.47	Elapsed: 16.9 min
+[17:42:38] Train (epoch 5/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.204439	Accuracy: 91.83	Elapsed: 17.0 min
+[17:42:47] Train (epoch 5/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.160200	Accuracy: 87.86	Elapsed: 17.2 min
+[17:42:57] Train (epoch 5/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.245295	Accuracy: 92.79	Elapsed: 17.3 min
+Confusion matrix :
+[[4454629  142872  133270   58580   14980      34]
+ [ 131444 5250538   31821    8687     457       0]
+ [ 161480   68974 2257554  414408     294       0]
+ [  54633    4874  242183 4090937     133       0]
+ [  30166    3055       0     314  115142       0]
+ [      0    5049    1167       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.46
+roads: 0.9272
+buildings: 0.9682
+low veg.: 0.7777
+trees: 0.9313
+cars: 0.7744
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9245
+buildings: 0.9636
+low veg.: 0.8108
+trees: 0.9126
+cars: 0.8234
+clutter: 0.0000
+mean F1Score: 0.8870
+---
+Kappa: 0.8849
+[0.85962049 0.92966553 0.6818034  0.83920977 0.69977696 0.        ]
+mean MIoU: 0.8020
+---
+Validation @ epoch 5 iter 5000: mIoU 0.8020 (62.0 s)  (best 0.8026)
+[17:44:08] Train (epoch 6/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.241674	Accuracy: 97.25	Elapsed: 18.5 min
+[17:44:18] Train (epoch 6/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.174707	Accuracy: 88.77	Elapsed: 18.7 min
+[17:44:27] Train (epoch 6/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.212992	Accuracy: 84.60	Elapsed: 18.8 min
+[17:44:37] Train (epoch 6/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.246835	Accuracy: 91.13	Elapsed: 19.0 min
+[17:44:46] Train (epoch 6/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.239170	Accuracy: 93.63	Elapsed: 19.2 min
+Confusion matrix :
+[[4394320  150642  158204   78009   22834     356]
+ [ 123247 5260247   29105    9049    1299       0]
+ [ 129299   69168 2302689  401009     545       0]
+ [  32125    5701  290158 4064504     272       0]
+ [  20445    3206      79     593  124354       0]
+ [      0    5580     636       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.34
+roads: 0.9147
+buildings: 0.9700
+low veg.: 0.7933
+trees: 0.9253
+cars: 0.8364
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9248
+buildings: 0.9636
+low veg.: 0.8103
+trees: 0.9087
+cars: 0.8346
+clutter: 0.0000
+mean F1Score: 0.8884
+---
+Kappa: 0.8833
+[0.86003256 0.92982502 0.68108919 0.83264788 0.71621349 0.        ]
+mean MIoU: 0.8040
+---
+Validation @ epoch 6 iter 5500: mIoU 0.8040 (61.9 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.8040)
+[17:45:58] Train (epoch 6/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.267036	Accuracy: 89.85	Elapsed: 20.4 min
+[17:46:08] Train (epoch 6/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.227127	Accuracy: 92.39	Elapsed: 20.5 min
+[17:46:17] Train (epoch 6/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.236958	Accuracy: 92.22	Elapsed: 20.7 min
+[17:46:27] Train (epoch 6/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.290403	Accuracy: 82.43	Elapsed: 20.8 min
+[17:46:36] Train (epoch 6/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.247649	Accuracy: 91.02	Elapsed: 21.0 min
+Confusion matrix :
+[[4415236  151696  172510   48586   15487     850]
+ [ 114548 5267190   33937    7064     208       0]
+ [ 129184   79275 2381515  312346     390       0]
+ [  54679    7556  353723 3976690     112       0]
+ [  28551    4369      84     321  114985     367]
+ [      0    6209       7       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.39
+roads: 0.9190
+buildings: 0.9713
+low veg.: 0.8204
+trees: 0.9053
+cars: 0.7734
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9250
+buildings: 0.9630
+low veg.: 0.8150
+trees: 0.9102
+cars: 0.8217
+clutter: 0.0000
+mean F1Score: 0.8870
+---
+Kappa: 0.8841
+[0.86044721 0.9286216  0.68770862 0.83525009 0.69741136 0.        ]
+mean MIoU: 0.8019
+---
+Validation @ epoch 6 iter 6000: mIoU 0.8019 (62.0 s)  (best 0.8040)
+[17:47:48] Train (epoch 7/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.193346	Accuracy: 93.85	Elapsed: 22.2 min
+[17:47:57] Train (epoch 7/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.202400	Accuracy: 94.96	Elapsed: 22.3 min
+[17:48:07] Train (epoch 7/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.237104	Accuracy: 92.56	Elapsed: 22.5 min
+[17:48:16] Train (epoch 7/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.167216	Accuracy: 92.69	Elapsed: 22.7 min
+[17:48:26] Train (epoch 7/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.129794	Accuracy: 90.12	Elapsed: 22.8 min
+Confusion matrix :
+[[4538678   81912   81148   80367   22182      78]
+ [ 196133 5175457   34674   14983    1700       0]
+ [ 268904   41745 2060666  530271    1124       0]
+ [  47516    4799  184608 4155648     189       0]
+ [  23071    1503      23     552  123364     164]
+ [      1    4893    1222       0       0     100]]
+17677675 pixels processed
+Total accuracy : 90.81
+roads: 0.9447
+buildings: 0.9544
+low veg.: 0.7099
+trees: 0.9460
+cars: 0.8297
+clutter: 0.0161
+---
+F1Score :
+roads: 0.9189
+buildings: 0.9644
+low veg.: 0.7828
+trees: 0.9059
+cars: 0.8301
+clutter: 0.0305
+mean F1Score: 0.8804
+---
+Kappa: 0.8760
+[0.84994129 0.93120622 0.64307691 0.82799432 0.70951044 0.01548467]
+mean MIoU: 0.7923
+---
+Validation @ epoch 7 iter 6500: mIoU 0.7923 (62.0 s)  (best 0.8040)
+[17:49:37] Train (epoch 7/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.186502	Accuracy: 95.62	Elapsed: 24.0 min
+[17:49:47] Train (epoch 7/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.173697	Accuracy: 96.04	Elapsed: 24.2 min
+[17:49:56] Train (epoch 7/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.268046	Accuracy: 91.00	Elapsed: 24.3 min
+[17:50:06] Train (epoch 7/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.212081	Accuracy: 89.16	Elapsed: 24.5 min
+[17:50:15] Train (epoch 7/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.217843	Accuracy: 91.49	Elapsed: 24.6 min
+Confusion matrix :
+[[4406353  141613  149906   85890   18703    1900]
+ [  95751 5278298   40090    7899     909       0]
+ [ 108557   82695 2317399  393728     331       0]
+ [  27185    7981  286294 4071262      38       0]
+ [  23308    4979     132    1091  118572     595]
+ [      0    4983    1233       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.60
+roads: 0.9172
+buildings: 0.9733
+low veg.: 0.7984
+trees: 0.9268
+cars: 0.7975
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9310
+buildings: 0.9646
+low veg.: 0.8134
+trees: 0.9095
+cars: 0.8256
+clutter: 0.0000
+mean F1Score: 0.8889
+---
+Kappa: 0.8868
+[0.87096431 0.93170583 0.68554697 0.8340412  0.70303217 0.        ]
+mean MIoU: 0.8051
+---
+Validation @ epoch 7 iter 7000: mIoU 0.8051 (61.9 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.8051)
+[17:51:27] Train (epoch 8/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.191638	Accuracy: 83.59	Elapsed: 25.8 min
+[17:51:37] Train (epoch 8/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.209232	Accuracy: 96.00	Elapsed: 26.0 min
+[17:51:46] Train (epoch 8/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.244648	Accuracy: 88.48	Elapsed: 26.2 min
+[17:51:56] Train (epoch 8/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.191571	Accuracy: 93.99	Elapsed: 26.3 min
+[17:52:05] Train (epoch 8/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.231407	Accuracy: 92.16	Elapsed: 26.5 min
+Confusion matrix :
+[[4473870   54257  185496   66616   12307   11819]
+ [ 350772 4986039   71899    9546    2597    2094]
+ [ 115614   29087 2347662  400977     882    8488]
+ [  43532    3226  312311 4033416     220      55]
+ [  48224     440      40     728   98898     347]
+ [     31     157    5997       0       0      31]]
+17677675 pixels processed
+Total accuracy : 90.17
+roads: 0.9312
+buildings: 0.9194
+low veg.: 0.8088
+trees: 0.9182
+cars: 0.6652
+clutter: 0.0050
+---
+F1Score :
+roads: 0.9097
+buildings: 0.9501
+low veg.: 0.8059
+trees: 0.9060
+cars: 0.7504
+clutter: 0.0021
+mean F1Score: 0.8644
+---
+Kappa: 0.8679
+[0.8342822  0.90488854 0.67491554 0.82811022 0.60053557 0.00106827]
+mean MIoU: 0.7685
+---
+Validation @ epoch 8 iter 7500: mIoU 0.7685 (61.9 s)  (best 0.8051)
+[17:53:16] Train (epoch 8/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.256126	Accuracy: 96.29	Elapsed: 27.7 min
+[17:53:26] Train (epoch 8/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.281149	Accuracy: 90.23	Elapsed: 27.8 min
+[17:53:35] Train (epoch 8/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.157456	Accuracy: 86.75	Elapsed: 28.0 min
+[17:53:45] Train (epoch 8/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.168157	Accuracy: 93.03	Elapsed: 28.1 min
+[17:53:54] Train (epoch 8/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.369729	Accuracy: 82.75	Elapsed: 28.3 min
+Confusion matrix :
+[[4341772  175017  172696   86197   26282    2401]
+ [ 135057 5235996   37247   11896    2751       0]
+ [  81668  104846 2181360  534421     415       0]
+ [  30909    8533  203825 4149159     334       0]
+ [  23582    4176      35     632  120022     230]
+ [      0    6216       0       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.67
+roads: 0.9037
+buildings: 0.9655
+low veg.: 0.7515
+trees: 0.9445
+cars: 0.8073
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9221
+buildings: 0.9557
+low veg.: 0.7935
+trees: 0.9044
+cars: 0.8042
+clutter: 0.0000
+mean F1Score: 0.8760
+---
+Kappa: 0.8742
+[0.85542365 0.91510634 0.65772696 0.82555444 0.67254664 0.        ]
+mean MIoU: 0.7853
+---
+Validation @ epoch 8 iter 8000: mIoU 0.7853 (62.0 s)  (best 0.8051)
+[17:55:06] Train (epoch 9/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.147533	Accuracy: 92.99	Elapsed: 29.5 min
+[17:55:15] Train (epoch 9/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.188662	Accuracy: 97.72	Elapsed: 29.6 min
+[17:55:25] Train (epoch 9/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.191176	Accuracy: 100.00	Elapsed: 29.8 min
+[17:55:34] Train (epoch 9/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.165533	Accuracy: 93.96	Elapsed: 30.0 min
+[17:55:44] Train (epoch 9/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.219756	Accuracy: 92.57	Elapsed: 30.1 min
+Confusion matrix :
+[[4482709  125437  120411   48653   27155       0]
+ [ 130456 5252350   31588    6493    2060       0]
+ [ 197685   63859 2301165  339649     352       0]
+ [  53310    6870  308716 4023690     174       0]
+ [  20061    1614      61     501  126440       0]
+ [      0    6134      82       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.56
+roads: 0.9330
+buildings: 0.9685
+low veg.: 0.7928
+trees: 0.9160
+cars: 0.8504
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9254
+buildings: 0.9656
+low veg.: 0.8125
+trees: 0.9133
+cars: 0.8295
+clutter: 0.0000
+mean F1Score: 0.8892
+---
+Kappa: 0.8864
+[0.86108623 0.93344229 0.68414404 0.84035985 0.70867289 0.        ]
+mean MIoU: 0.8055
+---
+Validation @ epoch 9 iter 8500: mIoU 0.8055 (61.9 s)  -> new best, saved to results\ViT_Vaihingen_best.pth  (best 0.8055)
+[17:56:56] Train (epoch 9/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.159802	Accuracy: 92.76	Elapsed: 31.3 min
+[17:57:05] Train (epoch 9/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.166310	Accuracy: 95.64	Elapsed: 31.5 min
+[17:57:15] Train (epoch 9/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.242666	Accuracy: 85.37	Elapsed: 31.6 min
+[17:57:24] Train (epoch 9/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.178136	Accuracy: 92.43	Elapsed: 31.8 min
+[17:57:34] Train (epoch 9/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.199295	Accuracy: 87.92	Elapsed: 32.0 min
+Confusion matrix :
+[[4495506  122501  133227   37968   15055     108]
+ [ 151785 5224154   39982    4786    2240       0]
+ [ 182396   66710 2292037  360639     928       0]
+ [  65600    7880  299231 4019682     367       0]
+ [  35560    1436      11     290  111380       0]
+ [      0    3904    2312       0       0       0]]
+17677675 pixels processed
+Total accuracy : 91.32
+roads: 0.9357
+buildings: 0.9633
+low veg.: 0.7896
+trees: 0.9151
+cars: 0.7491
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9236
+buildings: 0.9630
+low veg.: 0.8085
+trees: 0.9119
+cars: 0.7994
+clutter: 0.0000
+mean F1Score: 0.8813
+---
+Kappa: 0.8830
+[0.85796913 0.92867608 0.67862482 0.83805478 0.66588149 0.        ]
+mean MIoU: 0.7938
+---
+Validation @ epoch 9 iter 9000: mIoU 0.7938 (62.0 s)  (best 0.8055)
+[17:58:45] Train (epoch 10/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.276753	Accuracy: 87.85	Elapsed: 33.1 min
+[17:58:55] Train (epoch 10/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.193097	Accuracy: 93.42	Elapsed: 33.3 min
+[17:59:04] Train (epoch 10/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.226032	Accuracy: 89.94	Elapsed: 33.5 min
+[17:59:14] Train (epoch 10/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.206921	Accuracy: 89.57	Elapsed: 33.6 min
+[17:59:23] Train (epoch 10/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.244743	Accuracy: 91.96	Elapsed: 33.8 min
+Confusion matrix :
+[[4444828  103191  159008   76954   20384       0]
+ [ 144559 5231538   36041    9342    1467       0]
+ [ 158714   57363 2307778  378469     386       0]
+ [  28320    8194  314077 4041782     387       0]
+ [  22883    2239     160     639  122756       0]
+ [      0    5358     856       2       0       0]]
+17677675 pixels processed
+Total accuracy : 91.35
+roads: 0.9252
+buildings: 0.9647
+low veg.: 0.7950
+trees: 0.9201
+cars: 0.8257
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9257
+buildings: 0.9660
+low veg.: 0.8068
+trees: 0.9083
+cars: 0.8349
+clutter: 0.0000
+mean F1Score: 0.8883
+---
+Kappa: 0.8836
+[0.8615943  0.93432134 0.67620219 0.83195634 0.71660994 0.        ]
+mean MIoU: 0.8041
+---
+Validation @ epoch 10 iter 9500: mIoU 0.8041 (62.0 s)  (best 0.8055)
+[18:00:35] Train (epoch 10/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.192151	Accuracy: 93.48	Elapsed: 35.0 min
+[18:00:44] Train (epoch 10/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.230433	Accuracy: 86.16	Elapsed: 35.1 min
+[18:00:54] Train (epoch 10/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.245779	Accuracy: 92.11	Elapsed: 35.3 min
+[18:01:03] Train (epoch 10/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.170236	Accuracy: 93.31	Elapsed: 35.4 min
+[18:01:13] Train (epoch 10/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.178326	Accuracy: 86.95	Elapsed: 35.6 min
+Confusion matrix :
+[[4529467   95901  123379   39140   16478       0]
+ [ 210407 5151762   53249    5631    1898       0]
+ [ 272291   43651 2277268  308772     728       0]
+ [  75310    6063  371528 3939626     233       0]
+ [  31659    2411       6     259  114173     169]
+ [      9    6062     145       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.58
+roads: 0.9428
+buildings: 0.9500
+low veg.: 0.7845
+trees: 0.8968
+cars: 0.7679
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9129
+buildings: 0.9604
+low veg.: 0.7951
+trees: 0.9071
+cars: 0.8092
+clutter: 0.0000
+mean F1Score: 0.8769
+---
+Kappa: 0.8731
+[0.83971683 0.92374568 0.65988316 0.82999569 0.67954456 0.        ]
+mean MIoU: 0.7866
+---
+Validation @ epoch 10 iter 10000: mIoU 0.7866 (62.0 s)  (best 0.8055)
+[18:02:24] Train (epoch 11/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.193504	Accuracy: 90.53	Elapsed: 36.8 min
+[18:02:34] Train (epoch 11/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.195757	Accuracy: 91.45	Elapsed: 37.0 min
+[18:02:43] Train (epoch 11/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.170095	Accuracy: 91.01	Elapsed: 37.1 min
+[18:02:53] Train (epoch 11/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.246050	Accuracy: 90.67	Elapsed: 37.3 min
+[18:03:02] Train (epoch 11/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.189402	Accuracy: 90.98	Elapsed: 37.4 min
+Confusion matrix :
+[[4536962  129242   71950   48725   15636    1850]
+ [ 162033 5235709   19152    5177     876       0]
+ [ 305031   78230 2140883  378124     442       0]
+ [  69975   11708  288665 4022284     128       0]
+ [  28956    3668       0     471  115582       0]
+ [      0    6122      94       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.80
+roads: 0.9443
+buildings: 0.9655
+low veg.: 0.7375
+trees: 0.9157
+cars: 0.7774
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9159
+buildings: 0.9618
+low veg.: 0.7895
+trees: 0.9092
+cars: 0.8217
+clutter: 0.0000
+mean F1Score: 0.8796
+---
+Kappa: 0.8758
+[0.84481525 0.92635985 0.65219701 0.83358959 0.69728944 0.        ]
+mean MIoU: 0.7909
+---
+Validation @ epoch 11 iter 10500: mIoU 0.7909 (62.0 s)  (best 0.8055)
+[18:04:14] Train (epoch 11/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.228644	Accuracy: 88.73	Elapsed: 38.6 min
+[18:04:23] Train (epoch 11/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.259129	Accuracy: 90.51	Elapsed: 38.8 min
+[18:04:33] Train (epoch 11/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.321561	Accuracy: 91.49	Elapsed: 38.9 min
+[18:04:42] Train (epoch 11/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.238129	Accuracy: 88.68	Elapsed: 39.1 min
+[18:04:52] Train (epoch 11/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.290300	Accuracy: 86.40	Elapsed: 39.3 min
+Confusion matrix :
+[[4421356  139834  129966   76435   33151    3623]
+ [ 258436 5099088   51116   10709    3467     131]
+ [ 149313   66093 2174530  511416    1356       2]
+ [  41121    7593  212017 4131554     382      93]
+ [  19684    2790      21     456  125034     692]
+ [      0    6100     116       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.24
+roads: 0.9203
+buildings: 0.9403
+low veg.: 0.7491
+trees: 0.9405
+cars: 0.8410
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9122
+buildings: 0.9492
+low veg.: 0.7950
+trees: 0.9057
+cars: 0.8013
+clutter: 0.0000
+mean F1Score: 0.8727
+---
+Kappa: 0.8684
+[0.83850254 0.9032357  0.65975899 0.82767216 0.66851304 0.        ]
+mean MIoU: 0.7795
+---
+Validation @ epoch 11 iter 11000: mIoU 0.7795 (62.0 s)  (best 0.8055)
+[18:06:03] Train (epoch 12/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.201121	Accuracy: 88.78	Elapsed: 40.4 min
+[18:06:13] Train (epoch 12/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.152554	Accuracy: 97.59	Elapsed: 40.6 min
+[18:06:23] Train (epoch 12/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.250524	Accuracy: 85.94	Elapsed: 40.8 min
+[18:06:32] Train (epoch 12/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.233012	Accuracy: 94.80	Elapsed: 40.9 min
+[18:06:42] Train (epoch 12/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.296629	Accuracy: 93.60	Elapsed: 41.1 min
+Confusion matrix :
+[[4427382  160774  112748   72076   29090    2295]
+ [ 123893 5259107   29398    8550    1999       0]
+ [ 188793   95109 2118705  498967    1136       0]
+ [  48305   11290  195372 4137450     343       0]
+ [  19601    2998       0     484  125487     107]
+ [      0    5127    1089       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.90
+roads: 0.9215
+buildings: 0.9698
+low veg.: 0.7299
+trees: 0.9419
+cars: 0.8440
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9212
+buildings: 0.9599
+low veg.: 0.7906
+trees: 0.9083
+cars: 0.8182
+clutter: 0.0000
+mean F1Score: 0.8796
+---
+Kappa: 0.8771
+[0.85388982 0.92293452 0.6536556  0.83200998 0.69236117 0.        ]
+mean MIoU: 0.7910
+---
+Validation @ epoch 12 iter 11500: mIoU 0.7910 (61.9 s)  (best 0.8055)
+[18:07:53] Train (epoch 12/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.277220	Accuracy: 86.38	Elapsed: 42.3 min
+[18:08:03] Train (epoch 12/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.188912	Accuracy: 86.54	Elapsed: 42.4 min
+[18:08:12] Train (epoch 12/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.160341	Accuracy: 94.13	Elapsed: 42.6 min
+[18:08:22] Train (epoch 12/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.295611	Accuracy: 93.34	Elapsed: 42.8 min
+[18:08:31] Train (epoch 12/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.220769	Accuracy: 86.17	Elapsed: 42.9 min
+Confusion matrix :
+[[4397684  130863  140250   80555   51167    3846]
+ [ 261719 5104265   36500   13884    5192    1387]
+ [ 171629   68071 2146381  512080    3017    1532]
+ [  46472    5612  257060 4081718    1828      70]
+ [  14866    3125       9     382  130222      73]
+ [      0    3954    2262       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.72
+roads: 0.9154
+buildings: 0.9412
+low veg.: 0.7394
+trees: 0.9292
+cars: 0.8759
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9070
+buildings: 0.9506
+low veg.: 0.7826
+trees: 0.8989
+cars: 0.7658
+clutter: 0.0000
+mean F1Score: 0.8610
+---
+Kappa: 0.8615
+[0.8299003  0.90588336 0.64286174 0.81639895 0.62045635 0.        ]
+mean MIoU: 0.7631
+---
+Validation @ epoch 12 iter 12000: mIoU 0.7631 (61.9 s)  (best 0.8055)
+[18:09:43] Train (epoch 13/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.221000	Accuracy: 92.77	Elapsed: 44.1 min
+[18:09:52] Train (epoch 13/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.247337	Accuracy: 91.80	Elapsed: 44.3 min
+[18:10:02] Train (epoch 13/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.201988	Accuracy: 83.11	Elapsed: 44.4 min
+[18:10:11] Train (epoch 13/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.183911	Accuracy: 91.10	Elapsed: 44.6 min
+[18:10:21] Train (epoch 13/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.399178	Accuracy: 95.34	Elapsed: 44.7 min
+Confusion matrix :
+[[4389623  156100  112427  111309   30589    4317]
+ [ 362309 5014289   26973   11870    5678    1828]
+ [ 175319  143077 2056411  522168    1107    4628]
+ [  26719   14022  255797 4096023     162      37]
+ [  21653    3618     233    1021  121813     339]
+ [      0    6216       0       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.69
+roads: 0.9137
+buildings: 0.9246
+low veg.: 0.7084
+trees: 0.9324
+cars: 0.8193
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8977
+buildings: 0.9320
+low veg.: 0.7681
+trees: 0.8968
+cars: 0.7909
+clutter: 0.0000
+mean F1Score: 0.8571
+---
+Kappa: 0.8474
+[0.81434615 0.87266036 0.62350628 0.81284361 0.65415948 0.        ]
+mean MIoU: 0.7555
+---
+Validation @ epoch 13 iter 12500: mIoU 0.7555 (61.9 s)  (best 0.8055)
+[18:11:32] Train (epoch 13/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.200547	Accuracy: 90.78	Elapsed: 45.9 min
+[18:11:42] Train (epoch 13/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.175490	Accuracy: 93.71	Elapsed: 46.1 min
+[18:11:51] Train (epoch 13/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.249523	Accuracy: 93.11	Elapsed: 46.2 min
+[18:12:01] Train (epoch 13/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.311875	Accuracy: 92.71	Elapsed: 46.4 min
+[18:12:10] Train (epoch 13/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.198827	Accuracy: 92.36	Elapsed: 46.6 min
+Confusion matrix :
+[[4487802  106255  121176   77044    9931    2157]
+ [ 243359 5128575   37978   10749     784    1502]
+ [ 196861   67280 2214244  424267      58       0]
+ [  38205    5906  325799 4022846       4       0]
+ [  41757    6644     196    1222   97293    1565]
+ [      0    5659     557       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.23
+roads: 0.9341
+buildings: 0.9457
+low veg.: 0.7628
+trees: 0.9158
+cars: 0.6544
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9147
+buildings: 0.9548
+low veg.: 0.7904
+trees: 0.9011
+cars: 0.7579
+clutter: 0.0000
+mean F1Score: 0.8638
+---
+Kappa: 0.8683
+[0.84285142 0.9134207  0.65347466 0.8199779  0.61016343 0.        ]
+mean MIoU: 0.7680
+---
+Validation @ epoch 13 iter 13000: mIoU 0.7680 (62.0 s)  (best 0.8055)
+[18:13:22] Train (epoch 14/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.213091	Accuracy: 93.85	Elapsed: 47.7 min
+[18:13:31] Train (epoch 14/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.222347	Accuracy: 98.13	Elapsed: 47.9 min
+[18:13:41] Train (epoch 14/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.259482	Accuracy: 93.54	Elapsed: 48.1 min
+[18:13:50] Train (epoch 14/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.225797	Accuracy: 88.24	Elapsed: 48.2 min
+[18:14:00] Train (epoch 14/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.209448	Accuracy: 85.89	Elapsed: 48.4 min
+Confusion matrix :
+[[4511582  121434  106224   48912   16213       0]
+ [ 358132 5014342   39493    8128    2852       0]
+ [ 295629   73100 2045995  487405     581       0]
+ [  80621    7366  239734 4064958      81       0]
+ [  52878    3104      23     329   92343       0]
+ [     23    6065     128       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.98
+roads: 0.9391
+buildings: 0.9247
+low veg.: 0.7049
+trees: 0.9254
+cars: 0.6211
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8931
+buildings: 0.9418
+low veg.: 0.7671
+trees: 0.9031
+cars: 0.7083
+clutter: 0.0000
+mean F1Score: 0.8427
+---
+Kappa: 0.8511
+[0.80684299 0.89001203 0.62220221 0.82327696 0.54834208 0.        ]
+mean MIoU: 0.7381
+---
+Validation @ epoch 14 iter 13500: mIoU 0.7381 (61.9 s)  (best 0.8055)
+[18:15:11] Train (epoch 14/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.262474	Accuracy: 88.13	Elapsed: 49.6 min
+[18:15:21] Train (epoch 14/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.339861	Accuracy: 88.08	Elapsed: 49.7 min
+[18:15:30] Train (epoch 14/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.190721	Accuracy: 91.36	Elapsed: 49.9 min
+[18:15:40] Train (epoch 14/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.239360	Accuracy: 90.77	Elapsed: 50.1 min
+[18:15:49] Train (epoch 14/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.247192	Accuracy: 88.11	Elapsed: 50.2 min
+Confusion matrix :
+[[4491933   86758  167658   42223   15710      83]
+ [ 226971 5146272   42778    6046     880       0]
+ [ 178629   61941 2346413  315489     238       0]
+ [  46715    4590  421501 3919789     165       0]
+ [  34589    3072     230     523  110263       0]
+ [     40    3156    3020       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.59
+roads: 0.9350
+buildings: 0.9490
+low veg.: 0.8084
+trees: 0.8923
+cars: 0.7416
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9183
+buildings: 0.9593
+low veg.: 0.7975
+trees: 0.9035
+cars: 0.7992
+clutter: 0.0000
+mean F1Score: 0.8756
+---
+Kappa: 0.8735
+[0.84892661 0.92186389 0.66322253 0.82399731 0.66555804 0.        ]
+mean MIoU: 0.7847
+---
+Validation @ epoch 14 iter 14000: mIoU 0.7847 (61.9 s)  (best 0.8055)
+[18:17:00] Train (epoch 15/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.226747	Accuracy: 92.62	Elapsed: 51.4 min
+[18:17:10] Train (epoch 15/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.232555	Accuracy: 85.49	Elapsed: 51.6 min
+[18:17:19] Train (epoch 15/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.256751	Accuracy: 92.32	Elapsed: 51.7 min
+[18:17:29] Train (epoch 15/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.188365	Accuracy: 93.00	Elapsed: 51.9 min
+[18:17:38] Train (epoch 15/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.267994	Accuracy: 93.55	Elapsed: 52.0 min
+Confusion matrix :
+[[4375449  209310  129241   70545   15773    4047]
+ [ 159697 5201994   44327   11540    4168    1221]
+ [ 171050   79309 2183760  461702      15    6874]
+ [  54455    8753  266269 4063248      27       8]
+ [  40463    2920      13     838  102931    1512]
+ [     91    1282    4843       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.10
+roads: 0.9107
+buildings: 0.9593
+low veg.: 0.7523
+trees: 0.9250
+cars: 0.6923
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9110
+buildings: 0.9522
+low veg.: 0.7896
+trees: 0.9029
+cars: 0.7580
+clutter: 0.0000
+mean F1Score: 0.8627
+---
+Kappa: 0.8665
+[0.83658657 0.90872127 0.65237439 0.82295547 0.61028697 0.        ]
+mean MIoU: 0.7662
+---
+Validation @ epoch 15 iter 14500: mIoU 0.7662 (61.9 s)  (best 0.8055)
+[18:18:50] Train (epoch 15/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.330637	Accuracy: 94.12	Elapsed: 53.2 min
+[18:18:59] Train (epoch 15/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.182013	Accuracy: 93.83	Elapsed: 53.4 min
+[18:19:09] Train (epoch 15/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.212001	Accuracy: 99.04	Elapsed: 53.5 min
+[18:19:18] Train (epoch 15/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.211836	Accuracy: 89.85	Elapsed: 53.7 min
+[18:19:28] Train (epoch 15/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.207916	Accuracy: 86.93	Elapsed: 53.9 min
+Confusion matrix :
+[[4285766  204378  177999  115489   20423     310]
+ [ 143258 5223442   38441   16553    1253       0]
+ [  90322   92420 2164128  555308     532       0]
+ [  21323    6011  222635 4142679     112       0]
+ [  26212    9076     565     871  111953       0]
+ [      0    3006    3210       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.10
+roads: 0.8921
+buildings: 0.9632
+low veg.: 0.7456
+trees: 0.9431
+cars: 0.7530
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9147
+buildings: 0.9531
+low veg.: 0.7856
+trees: 0.8983
+cars: 0.7913
+clutter: 0.0000
+mean F1Score: 0.8686
+---
+Kappa: 0.8665
+[0.84274562 0.91035021 0.6468657  0.81533054 0.65470739 0.        ]
+mean MIoU: 0.7740
+---
+Validation @ epoch 15 iter 15000: mIoU 0.7740 (61.9 s)  (best 0.8055)
+[18:20:39] Train (epoch 16/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.360964	Accuracy: 88.39	Elapsed: 55.0 min
+[18:20:49] Train (epoch 16/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.217360	Accuracy: 92.09	Elapsed: 55.2 min
+[18:20:58] Train (epoch 16/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.256528	Accuracy: 92.48	Elapsed: 55.4 min
+[18:21:08] Train (epoch 16/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.233682	Accuracy: 92.20	Elapsed: 55.5 min
+[18:21:17] Train (epoch 16/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.197467	Accuracy: 86.77	Elapsed: 55.7 min
+Confusion matrix :
+[[4355499  175151  156732   88884   25912    2187]
+ [ 158533 5219030   33174   10025    2185       0]
+ [ 118834   84607 2136011  562893     365       0]
+ [  31881    7375  206252 4147122     130       0]
+ [  26302    4013      29     916  116903     514]
+ [      0    1303    4913       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.37
+roads: 0.9066
+buildings: 0.9624
+low veg.: 0.7359
+trees: 0.9441
+cars: 0.7863
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9174
+buildings: 0.9564
+low veg.: 0.7853
+trees: 0.9013
+cars: 0.7948
+clutter: 0.0000
+mean F1Score: 0.8710
+---
+Kappa: 0.8700
+[0.84738736 0.91635946 0.64652961 0.82032243 0.65946669 0.        ]
+mean MIoU: 0.7780
+---
+Validation @ epoch 16 iter 15500: mIoU 0.7780 (62.0 s)  (best 0.8055)
+[18:22:29] Train (epoch 16/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.208044	Accuracy: 92.35	Elapsed: 56.9 min
+[18:22:38] Train (epoch 16/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.200015	Accuracy: 86.65	Elapsed: 57.0 min
+[18:22:48] Train (epoch 16/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.310652	Accuracy: 88.91	Elapsed: 57.2 min
+[18:22:57] Train (epoch 16/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.381384	Accuracy: 79.29	Elapsed: 57.3 min
+[18:23:07] Train (epoch 16/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.243458	Accuracy: 90.62	Elapsed: 57.5 min
+Confusion matrix :
+[[4427308  156145  101923   96169   22095     725]
+ [ 373596 5006347   29134   12308    1562       0]
+ [ 179523  117664 2070680  534341     502       0]
+ [  48434   11330  229542 4103277     177       0]
+ [  30495    4365       4    1003  112770      40]
+ [      0    2548    3668       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.93
+roads: 0.9215
+buildings: 0.9232
+low veg.: 0.7134
+trees: 0.9341
+cars: 0.7585
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8977
+buildings: 0.9339
+low veg.: 0.7759
+trees: 0.8979
+cars: 0.7892
+clutter: 0.0000
+mean F1Score: 0.8589
+---
+Kappa: 0.8506
+[0.81438036 0.87600138 0.63382064 0.81469493 0.65180073 0.        ]
+mean MIoU: 0.7581
+---
+Validation @ epoch 16 iter 16000: mIoU 0.7581 (61.9 s)  (best 0.8055)
+[18:24:18] Train (epoch 17/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.239308	Accuracy: 93.83	Elapsed: 58.7 min
+[18:24:28] Train (epoch 17/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.188249	Accuracy: 94.61	Elapsed: 58.9 min
+[18:24:37] Train (epoch 17/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.174926	Accuracy: 92.21	Elapsed: 59.0 min
+[18:24:47] Train (epoch 17/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.287794	Accuracy: 80.26	Elapsed: 59.2 min
+[18:24:56] Train (epoch 17/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.245424	Accuracy: 80.80	Elapsed: 59.3 min
+Confusion matrix :
+[[4439818  149446  147719   47007   19204    1171]
+ [ 198177 5176427   40203    6140    1979      21]
+ [ 183044   77378 2271901  370053     334       0]
+ [  57317    5341  371660 3958298     144       0]
+ [  32873    6063      17     498  108585     641]
+ [      0    3728    2488       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.26
+roads: 0.9241
+buildings: 0.9545
+low veg.: 0.7827
+trees: 0.9011
+cars: 0.7303
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9140
+buildings: 0.9549
+low veg.: 0.7921
+trees: 0.9022
+cars: 0.7786
+clutter: 0.0000
+mean F1Score: 0.8684
+---
+Kappa: 0.8688
+[0.84154786 0.91377152 0.6557097  0.82182758 0.63746786 0.        ]
+mean MIoU: 0.7741
+---
+Validation @ epoch 17 iter 16500: mIoU 0.7741 (61.9 s)  (best 0.8055)
+[18:26:08] Train (epoch 17/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.222023	Accuracy: 89.34	Elapsed: 60.5 min
+[18:26:17] Train (epoch 17/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.230855	Accuracy: 95.77	Elapsed: 60.7 min
+[18:26:27] Train (epoch 17/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.210386	Accuracy: 93.12	Elapsed: 60.8 min
+[18:26:36] Train (epoch 17/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.242624	Accuracy: 85.67	Elapsed: 61.0 min
+[18:26:46] Train (epoch 17/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.335359	Accuracy: 91.37	Elapsed: 61.2 min
+Confusion matrix :
+[[4350671  188061  167281   90059    7979     314]
+ [ 215048 5149544   50919    6425    1011       0]
+ [ 163930  108098 2148399  482194      89       0]
+ [  32742   15917  315603 4028496       2       0]
+ [  50693    7215    1130    1271   87225    1143]
+ [      0    5169    1047       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.18
+roads: 0.9056
+buildings: 0.9496
+low veg.: 0.7401
+trees: 0.9171
+cars: 0.5867
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9047
+buildings: 0.9451
+low veg.: 0.7691
+trees: 0.8951
+cars: 0.7121
+clutter: 0.0000
+mean F1Score: 0.8452
+---
+Kappa: 0.8540
+[0.82605931 0.89597692 0.62477252 0.810121   0.55290381 0.        ]
+mean MIoU: 0.7420
+---
+Validation @ epoch 17 iter 17000: mIoU 0.7420 (62.1 s)  (best 0.8055)
+[18:27:57] Train (epoch 18/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.204328	Accuracy: 94.76	Elapsed: 62.3 min
+[18:28:07] Train (epoch 18/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.217331	Accuracy: 89.10	Elapsed: 62.5 min
+[18:28:16] Train (epoch 18/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.247181	Accuracy: 89.98	Elapsed: 62.7 min
+[18:28:26] Train (epoch 18/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.204132	Accuracy: 93.47	Elapsed: 62.8 min
+[18:28:35] Train (epoch 18/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.194977	Accuracy: 91.23	Elapsed: 63.0 min
+Confusion matrix :
+[[4503347  105039   96202   77496   22233      48]
+ [ 269183 5116364   26112    9366    1922       0]
+ [ 258338   80599 1927027  636388     358       0]
+ [  57564    7961  137654 4189229     352       0]
+ [  30151    3760      18     583  114152      13]
+ [      0    4836    1380       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.66
+roads: 0.9373
+buildings: 0.9435
+low veg.: 0.6639
+trees: 0.9537
+cars: 0.7678
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9077
+buildings: 0.9526
+low veg.: 0.7570
+trees: 0.9003
+cars: 0.7936
+clutter: 0.0000
+mean F1Score: 0.8622
+---
+Kappa: 0.8602
+[0.830937   0.90955286 0.6090331  0.81875361 0.65777737 0.        ]
+mean MIoU: 0.7652
+---
+Validation @ epoch 18 iter 17500: mIoU 0.7652 (62.0 s)  (best 0.8055)
+[18:29:47] Train (epoch 18/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.221651	Accuracy: 94.85	Elapsed: 64.2 min
+[18:29:57] Train (epoch 18/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.211478	Accuracy: 83.72	Elapsed: 64.3 min
+[18:30:06] Train (epoch 18/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.161016	Accuracy: 89.14	Elapsed: 64.5 min
+[18:30:16] Train (epoch 18/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.244788	Accuracy: 84.30	Elapsed: 64.7 min
+[18:30:25] Train (epoch 18/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.408164	Accuracy: 72.56	Elapsed: 64.8 min
+Confusion matrix :
+[[4423783   88933  189951   87885   13813       0]
+ [ 697637 4626144   81577   16336    1249       4]
+ [ 193796   38258 2062334  607777     545       0]
+ [  42244    4250  202232 4143884     150       0]
+ [  56595    3909     678     772   86723       0]
+ [      0    1494    4722       0       0       0]]
+17677675 pixels processed
+Total accuracy : 86.79
+roads: 0.9208
+buildings: 0.8531
+low veg.: 0.7105
+trees: 0.9433
+cars: 0.5833
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8658
+buildings: 0.9083
+low veg.: 0.7576
+trees: 0.8960
+cars: 0.6906
+clutter: 0.0000
+mean F1Score: 0.8237
+---
+Kappa: 0.8220
+[0.76342711 0.83207157 0.6098206  0.8116462  0.52740309 0.        ]
+mean MIoU: 0.7089
+---
+Validation @ epoch 18 iter 18000: mIoU 0.7089 (62.0 s)  (best 0.8055)
+[18:31:37] Train (epoch 19/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.251858	Accuracy: 89.93	Elapsed: 66.0 min
+[18:31:46] Train (epoch 19/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.210192	Accuracy: 90.04	Elapsed: 66.2 min
+[18:31:56] Train (epoch 19/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.371941	Accuracy: 96.14	Elapsed: 66.3 min
+[18:32:05] Train (epoch 19/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.300279	Accuracy: 85.17	Elapsed: 66.5 min
+[18:32:15] Train (epoch 19/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.200176	Accuracy: 99.52	Elapsed: 66.6 min
+Confusion matrix :
+[[4501126  105809   88182  103144    6104       0]
+ [ 334193 5037007   34579   17009     159       0]
+ [ 260264   64073 1989808  588442     123       0]
+ [  53099    4679  227661 4107315       6       0]
+ [  65010    7975     106    1233   74218     135]
+ [      0    3492    2724       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.87
+roads: 0.9369
+buildings: 0.9288
+low veg.: 0.6855
+trees: 0.9350
+cars: 0.4992
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8986
+buildings: 0.9463
+low veg.: 0.7586
+trees: 0.8919
+cars: 0.6474
+clutter: 0.0000
+mean F1Score: 0.8286
+---
+Kappa: 0.8495
+[0.81587499 0.89802629 0.61112753 0.80494741 0.47861275 0.        ]
+mean MIoU: 0.7217
+---
+Validation @ epoch 19 iter 18500: mIoU 0.7217 (62.0 s)  (best 0.8055)
+[18:33:26] Train (epoch 19/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.242614	Accuracy: 89.90	Elapsed: 67.8 min
+[18:33:36] Train (epoch 19/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.304300	Accuracy: 74.99	Elapsed: 68.0 min
+[18:33:45] Train (epoch 19/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.218291	Accuracy: 93.19	Elapsed: 68.1 min
+[18:33:55] Train (epoch 19/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.267652	Accuracy: 88.05	Elapsed: 68.3 min
+[18:34:04] Train (epoch 19/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.261537	Accuracy: 93.71	Elapsed: 68.5 min
+Confusion matrix :
+[[4438729  169363  127855   54382   14034       2]
+ [ 269260 5099638   42813    8259    2362     615]
+ [ 230006   72077 2140111  460326     190       0]
+ [  66620    8723  311039 4006320      58       0]
+ [  42032    4122     247     633  101164     479]
+ [      0    1390    4826       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.30
+roads: 0.9239
+buildings: 0.9404
+low veg.: 0.7373
+trees: 0.9120
+cars: 0.6804
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9012
+buildings: 0.9463
+low veg.: 0.7741
+trees: 0.8980
+cars: 0.7592
+clutter: 0.0000
+mean F1Score: 0.8558
+---
+Kappa: 0.8557
+[0.82012138 0.89804146 0.63139617 0.81489557 0.61192468 0.        ]
+mean MIoU: 0.7553
+---
+Validation @ epoch 19 iter 19000: mIoU 0.7553 (61.9 s)  (best 0.8055)
+[18:35:16] Train (epoch 20/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.285365	Accuracy: 92.09	Elapsed: 69.7 min
+[18:35:25] Train (epoch 20/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.215267	Accuracy: 96.00	Elapsed: 69.8 min
+[18:35:35] Train (epoch 20/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.185613	Accuracy: 89.98	Elapsed: 70.0 min
+[18:35:44] Train (epoch 20/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.239522	Accuracy: 94.58	Elapsed: 70.1 min
+[18:35:54] Train (epoch 20/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.298434	Accuracy: 88.45	Elapsed: 70.3 min
+Confusion matrix :
+[[4477256  116710   96252   92895   21215      37]
+ [ 334898 5038131   35731   11779    2408       0]
+ [ 229520   74751 2002594  595581     264       0]
+ [  57013    6926  202205 4126458     158       0]
+ [  33994    4046       0     747  109874      16]
+ [     26    1542    4648       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.12
+roads: 0.9319
+buildings: 0.9290
+low veg.: 0.6899
+trees: 0.9394
+cars: 0.7390
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9011
+buildings: 0.9448
+low veg.: 0.7637
+trees: 0.8951
+cars: 0.7776
+clutter: 0.0000
+mean F1Score: 0.8565
+---
+Kappa: 0.8531
+[0.82003789 0.8953618  0.61778978 0.81010028 0.63613205 0.        ]
+mean MIoU: 0.7559
+---
+Validation @ epoch 20 iter 19500: mIoU 0.7559 (62.0 s)  (best 0.8055)
+[18:37:05] Train (epoch 20/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.223856	Accuracy: 90.30	Elapsed: 71.5 min
+[18:37:15] Train (epoch 20/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.274684	Accuracy: 90.04	Elapsed: 71.6 min
+[18:37:24] Train (epoch 20/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.188799	Accuracy: 94.73	Elapsed: 71.8 min
+[18:37:34] Train (epoch 20/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.205735	Accuracy: 90.77	Elapsed: 72.0 min
+[18:37:43] Train (epoch 20/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.392139	Accuracy: 76.33	Elapsed: 72.1 min
+Confusion matrix :
+[[4428095  167572  141667   50634   16009     388]
+ [ 159022 5218644   36496    7792     984       9]
+ [ 201964   86352 2222346  391727     321       0]
+ [  60055    5716  341118 3985701     170       0]
+ [  37705    7860     160     689  102250      13]
+ [      0    4099    2117       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.27
+roads: 0.9217
+buildings: 0.9623
+low veg.: 0.7656
+trees: 0.9073
+cars: 0.6877
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9138
+buildings: 0.9564
+low veg.: 0.7871
+trees: 0.9028
+cars: 0.7619
+clutter: 0.0000
+mean F1Score: 0.8644
+---
+Kappa: 0.8688
+[0.84134555 0.91642846 0.64899885 0.82287954 0.61536702 0.        ]
+mean MIoU: 0.7690
+---
+Validation @ epoch 20 iter 20000: mIoU 0.7690 (62.0 s)  (best 0.8055)
+[18:38:55] Train (epoch 21/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.232265	Accuracy: 84.71	Elapsed: 73.3 min
+[18:39:04] Train (epoch 21/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.208494	Accuracy: 91.94	Elapsed: 73.5 min
+[18:39:14] Train (epoch 21/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.368213	Accuracy: 78.39	Elapsed: 73.6 min
+[18:39:23] Train (epoch 21/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.319953	Accuracy: 84.77	Elapsed: 73.8 min
+[18:39:33] Train (epoch 21/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.282121	Accuracy: 80.92	Elapsed: 73.9 min
+Confusion matrix :
+[[4444996  156757  112119   64977   25469      47]
+ [ 251046 5131710   29310    7749    3129       3]
+ [ 216725  114823 2069858  500485     795      24]
+ [  53479   12246  239804 4086955     276       0]
+ [  31128    4856      86     399  112208       0]
+ [      0    4300    1916       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.64
+roads: 0.9252
+buildings: 0.9463
+low veg.: 0.7131
+trees: 0.9304
+cars: 0.7547
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9070
+buildings: 0.9461
+low veg.: 0.7729
+trees: 0.9029
+cars: 0.7724
+clutter: 0.0000
+mean F1Score: 0.8603
+---
+Kappa: 0.8601
+[0.82979452 0.89779107 0.62991255 0.822926   0.62915905 0.        ]
+mean MIoU: 0.7619
+---
+Validation @ epoch 21 iter 20500: mIoU 0.7619 (62.0 s)  (best 0.8055)
+[18:40:44] Train (epoch 21/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.249492	Accuracy: 87.14	Elapsed: 75.1 min
+[18:40:54] Train (epoch 21/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.222961	Accuracy: 84.48	Elapsed: 75.3 min
+[18:41:03] Train (epoch 21/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.186841	Accuracy: 88.71	Elapsed: 75.4 min
+[18:41:13] Train (epoch 21/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.212278	Accuracy: 86.22	Elapsed: 75.6 min
+[18:41:22] Train (epoch 21/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.222589	Accuracy: 84.06	Elapsed: 75.8 min
+Confusion matrix :
+[[4257403  120969  243774  118406   63813       0]
+ [ 469507 4858663   69786   15013    9978       0]
+ [ 101135   86988 1964824  748572    1191       0]
+ [  33699   10128  150771 4197896     266       0]
+ [  20903    3402     523    1413  122436       0]
+ [      0      32    6184       0       0       0]]
+17677675 pixels processed
+Total accuracy : 87.12
+roads: 0.8862
+buildings: 0.8959
+low veg.: 0.6769
+trees: 0.9556
+cars: 0.8235
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8790
+buildings: 0.9252
+low veg.: 0.7361
+trees: 0.8862
+cars: 0.7070
+clutter: 0.0000
+mean F1Score: 0.8267
+---
+Kappa: 0.8266
+[0.78410858 0.86078346 0.58238612 0.7956341  0.54677236 0.        ]
+mean MIoU: 0.7139
+---
+Validation @ epoch 21 iter 21000: mIoU 0.7139 (62.0 s)  (best 0.8055)
+[18:42:34] Train (epoch 22/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.265380	Accuracy: 76.70	Elapsed: 77.0 min
+[18:42:43] Train (epoch 22/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.264092	Accuracy: 92.88	Elapsed: 77.1 min
+[18:42:53] Train (epoch 22/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.253448	Accuracy: 69.75	Elapsed: 77.3 min
+[18:43:02] Train (epoch 22/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.170652	Accuracy: 92.22	Elapsed: 77.4 min
+[18:43:12] Train (epoch 22/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.174734	Accuracy: 93.23	Elapsed: 77.6 min
+Confusion matrix :
+[[4396600  126473  173403   85946   21943       0]
+ [ 330887 5026394   52904   10186    2576       0]
+ [ 150572   60444 2221728  469462     504       0]
+ [  35411    5307  291659 4060182     201       0]
+ [  31878    5528     185    1260  109826       0]
+ [     27    1031    5158       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.46
+roads: 0.9151
+buildings: 0.9269
+low veg.: 0.7654
+trees: 0.9243
+cars: 0.7387
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9019
+buildings: 0.9441
+low veg.: 0.7868
+trees: 0.9003
+cars: 0.7742
+clutter: 0.0000
+mean F1Score: 0.8614
+---
+Kappa: 0.8581
+[0.82131235 0.89410093 0.64848677 0.81864879 0.63154323 0.        ]
+mean MIoU: 0.7628
+---
+Validation @ epoch 22 iter 21500: mIoU 0.7628 (61.9 s)  (best 0.8055)
+[18:44:23] Train (epoch 22/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.242018	Accuracy: 91.61	Elapsed: 78.8 min
+[18:44:33] Train (epoch 22/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.341985	Accuracy: 79.71	Elapsed: 78.9 min
+[18:44:42] Train (epoch 22/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.266866	Accuracy: 81.23	Elapsed: 79.1 min
+[18:44:52] Train (epoch 22/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.265229	Accuracy: 74.01	Elapsed: 79.3 min
+[18:45:01] Train (epoch 22/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.215187	Accuracy: 87.47	Elapsed: 79.4 min
+Confusion matrix :
+[[4346684  248409  148595   51121    8132    1424]
+ [ 251371 5134529   29868    6582     597       0]
+ [ 197877  114723 2148656  440985     469       0]
+ [  42966    9342  402417 3937827     208       0]
+ [  45540   16310     258     583   84741    1245]
+ [      0    1936    4280       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.54
+roads: 0.9047
+buildings: 0.9468
+low veg.: 0.7402
+trees: 0.8964
+cars: 0.5700
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8973
+buildings: 0.9380
+low veg.: 0.7624
+trees: 0.8919
+cars: 0.6980
+clutter: 0.0000
+mean F1Score: 0.8375
+---
+Kappa: 0.8454
+[0.81366289 0.88318251 0.61599116 0.80494727 0.53605385 0.        ]
+mean MIoU: 0.7308
+---
+Validation @ epoch 22 iter 22000: mIoU 0.7308 (61.9 s)  (best 0.8055)
+[18:46:12] Train (epoch 23/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.210928	Accuracy: 86.32	Elapsed: 80.6 min
+[18:46:22] Train (epoch 23/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.230231	Accuracy: 83.26	Elapsed: 80.8 min
+[18:46:31] Train (epoch 23/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.269600	Accuracy: 92.90	Elapsed: 80.9 min
+[18:46:41] Train (epoch 23/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.310316	Accuracy: 92.84	Elapsed: 81.1 min
+[18:46:51] Train (epoch 23/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.244115	Accuracy: 92.02	Elapsed: 81.2 min
+Confusion matrix :
+[[4437553   86901  217508   39831   21702     870]
+ [ 355997 4917052  134784    6698    7290    1126]
+ [ 165127   15530 2410106  311475     472       0]
+ [  68396    1916  465506 3856771     171       0]
+ [  36845    2653     214     630  106923    1412]
+ [     23       0    6193       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.97
+roads: 0.9237
+buildings: 0.9067
+low veg.: 0.8303
+trees: 0.8780
+cars: 0.7192
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8994
+buildings: 0.9413
+low veg.: 0.7854
+trees: 0.8961
+cars: 0.7497
+clutter: 0.0000
+mean F1Score: 0.8544
+---
+Kappa: 0.8521
+[0.8171156  0.88916802 0.64667587 0.81171357 0.59963996 0.        ]
+mean MIoU: 0.7529
+---
+Validation @ epoch 23 iter 22500: mIoU 0.7529 (62.0 s)  (best 0.8055)
+[18:48:02] Train (epoch 23/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.223530	Accuracy: 95.48	Elapsed: 82.4 min
+[18:48:12] Train (epoch 23/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.237086	Accuracy: 94.60	Elapsed: 82.6 min
+[18:48:21] Train (epoch 23/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.206562	Accuracy: 94.28	Elapsed: 82.7 min
+[18:48:31] Train (epoch 23/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.234214	Accuracy: 96.91	Elapsed: 82.9 min
+[18:48:40] Train (epoch 23/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.215761	Accuracy: 88.35	Elapsed: 83.1 min
+Confusion matrix :
+[[4377729  138490  185635   90173   12274      64]
+ [ 243562 5115426   50169   13166     624       0]
+ [ 112181   61572 2185576  543131     250       0]
+ [  33021    4919  283559 4071231      30       0]
+ [  43021    8717     472    1489   94100     878]
+ [      0     296    5920       0       0       0]]
+17677675 pixels processed
+Total accuracy : 89.63
+roads: 0.9112
+buildings: 0.9433
+low veg.: 0.7529
+trees: 0.9268
+cars: 0.6329
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9107
+buildings: 0.9515
+low veg.: 0.7786
+trees: 0.8936
+cars: 0.7353
+clutter: 0.0000
+mean F1Score: 0.8539
+---
+Kappa: 0.8602
+[0.83605875 0.90748262 0.63747946 0.80766871 0.58138457 0.        ]
+mean MIoU: 0.7540
+---
+Validation @ epoch 23 iter 23000: mIoU 0.7540 (61.9 s)  (best 0.8055)
+[18:49:51] Train (epoch 24/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.243174	Accuracy: 91.00	Elapsed: 84.2 min
+[18:50:01] Train (epoch 24/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.185882	Accuracy: 96.34	Elapsed: 84.4 min
+[18:50:11] Train (epoch 24/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.324613	Accuracy: 84.96	Elapsed: 84.6 min
+[18:50:20] Train (epoch 24/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.256963	Accuracy: 87.37	Elapsed: 84.7 min
+[18:50:30] Train (epoch 24/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.287737	Accuracy: 96.15	Elapsed: 84.9 min
+Confusion matrix :
+[[4313032  155164  248067   70807   17295       0]
+ [ 346448 4940831  109107   23461    3017      83]
+ [ 125603   28715 2294327  453741     324       0]
+ [  39197    1303  303712 4048407     141       0]
+ [  43181    7141     414     941   96977      23]
+ [      0    2392    3824       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.78
+roads: 0.8977
+buildings: 0.9111
+low veg.: 0.7904
+trees: 0.9216
+cars: 0.6523
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8919
+buildings: 0.9359
+low veg.: 0.7828
+trees: 0.9006
+cars: 0.7280
+clutter: 0.0000
+mean F1Score: 0.8478
+---
+Kappa: 0.8491
+[0.80485124 0.87951732 0.64305879 0.81923201 0.57229101 0.        ]
+mean MIoU: 0.7438
+---
+Validation @ epoch 24 iter 23500: mIoU 0.7438 (62.0 s)  (best 0.8055)
+[18:51:41] Train (epoch 24/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.240895	Accuracy: 99.10	Elapsed: 86.1 min
+[18:51:50] Train (epoch 24/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.201508	Accuracy: 92.82	Elapsed: 86.2 min
+[18:52:00] Train (epoch 24/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.232523	Accuracy: 85.99	Elapsed: 86.4 min
+[18:52:09] Train (epoch 24/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.297132	Accuracy: 89.92	Elapsed: 86.5 min
+[18:52:19] Train (epoch 24/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.266468	Accuracy: 79.75	Elapsed: 86.7 min
+Confusion matrix :
+[[4472545  120850  126613   72831   11526       0]
+ [ 449138 4931234   32256    7872    2447       0]
+ [ 181352   97548 2086444  537175     191       0]
+ [  52182   11973  295488 4033110       7       0]
+ [  49853    6404      66    1010   91344       0]
+ [      1     489    5726       0       0       0]]
+17677675 pixels processed
+Total accuracy : 88.33
+roads: 0.9309
+buildings: 0.9093
+low veg.: 0.7188
+trees: 0.9181
+cars: 0.6144
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8937
+buildings: 0.9312
+low veg.: 0.7658
+trees: 0.8918
+cars: 0.7187
+clutter: 0.0000
+mean F1Score: 0.8402
+---
+Kappa: 0.8425
+[0.80777191 0.87121028 0.62043755 0.80474726 0.5609157  0.        ]
+mean MIoU: 0.7330
+---
+Validation @ epoch 24 iter 24000: mIoU 0.7330 (62.0 s)  (best 0.8055)
+[18:53:30] Train (epoch 25/50) [0/1000 (0%)]	Lr: 0.010000	Loss: 0.220829	Accuracy: 90.21	Elapsed: 87.9 min
+[18:53:40] Train (epoch 25/50) [100/1000 (10%)]	Lr: 0.010000	Loss: 0.225199	Accuracy: 91.49	Elapsed: 88.1 min
+[18:53:49] Train (epoch 25/50) [200/1000 (20%)]	Lr: 0.010000	Loss: 0.225767	Accuracy: 89.67	Elapsed: 88.2 min
+[18:53:59] Train (epoch 25/50) [300/1000 (30%)]	Lr: 0.010000	Loss: 0.260086	Accuracy: 93.20	Elapsed: 88.4 min
+[18:54:08] Train (epoch 25/50) [400/1000 (40%)]	Lr: 0.010000	Loss: 0.215766	Accuracy: 97.53	Elapsed: 88.5 min
+Confusion matrix :
+[[4361710  137927  167621  127775    9332       0]
+ [ 367513 4995656   42963   15764    1051       0]
+ [ 148355   83387 1931758  739082     128       0]
+ [  29301    6906  197344 4159207       2       0]
+ [  56108    8813     127    1915   81714       0]
+ [      0      49    6167       0       0       0]]
+17677675 pixels processed
+Total accuracy : 87.85
+roads: 0.9079
+buildings: 0.9212
+low veg.: 0.6655
+trees: 0.9468
+cars: 0.5496
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8931
+buildings: 0.9377
+low veg.: 0.7361
+trees: 0.8815
+cars: 0.6784
+clutter: 0.0000
+mean F1Score: 0.8254
+---
+Kappa: 0.8359
+[0.80688103 0.88262021 0.58239301 0.78813222 0.51331114 0.        ]
+mean MIoU: 0.7147
+---
+Validation @ epoch 25 iter 24500: mIoU 0.7147 (62.0 s)  (best 0.8055)
+[18:55:20] Train (epoch 25/50) [500/1000 (50%)]	Lr: 0.010000	Loss: 0.207595	Accuracy: 94.77	Elapsed: 89.7 min
+[18:55:29] Train (epoch 25/50) [600/1000 (60%)]	Lr: 0.010000	Loss: 0.240028	Accuracy: 92.84	Elapsed: 89.9 min
+[18:55:39] Train (epoch 25/50) [700/1000 (70%)]	Lr: 0.010000	Loss: 0.230564	Accuracy: 96.36	Elapsed: 90.0 min
+[18:55:48] Train (epoch 25/50) [800/1000 (80%)]	Lr: 0.010000	Loss: 0.240490	Accuracy: 95.11	Elapsed: 90.2 min
+[18:55:58] Train (epoch 25/50) [900/1000 (90%)]	Lr: 0.010000	Loss: 0.222492	Accuracy: 94.51	Elapsed: 90.4 min
+Confusion matrix :
+[[3914426  558676  193644  103684   33865      70]
+ [ 108403 5236505   49834   18123    5383    4699]
+ [ 137497   70492 2086400  607588     627     106]
+ [  33958    3834  252919 4101916     133       0]
+ [  30470    9602     239    1439  106927       0]
+ [    167     464    5585       0       0       0]]
+17677675 pixels processed
+Total accuracy : 87.38
+roads: 0.8148
+buildings: 0.9656
+low veg.: 0.7188
+trees: 0.9338
+cars: 0.7192
+clutter: 0.0000
+---
+F1Score :
+roads: 0.8671
+buildings: 0.9266
+low veg.: 0.7599
+trees: 0.8893
+cars: 0.7234
+clutter: 0.0000
+mean F1Score: 0.8332
+---
+Kappa: 0.8296
+[0.76530462 0.86325289 0.61275838 0.80059349 0.56669582 0.        ]
+mean MIoU: 0.7217
+---
+Validation @ epoch 25 iter 25000: mIoU 0.7217 (62.0 s)  (best 0.8055)
+[18:57:09] Train (epoch 26/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.283692	Accuracy: 80.30	Elapsed: 91.5 min
+[18:57:19] Train (epoch 26/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.254496	Accuracy: 92.47	Elapsed: 91.7 min
+[18:57:28] Train (epoch 26/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.183692	Accuracy: 95.16	Elapsed: 91.9 min
+[18:57:38] Train (epoch 26/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.160991	Accuracy: 95.08	Elapsed: 92.0 min
+[18:57:47] Train (epoch 26/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.209721	Accuracy: 91.52	Elapsed: 92.2 min
+Confusion matrix :
+[[4407265  161018  154238   62861   18974       9]
+ [ 170526 5202055   40978    7033    2307      48]
+ [ 172507   78645 2249327  401658     573       0]
+ [  47220    7019  312988 4025425     108       0]
+ [  30821    8918     146     804  107988       0]
+ [     77     584    5555       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.46
+roads: 0.9173
+buildings: 0.9593
+low veg.: 0.7749
+trees: 0.9164
+cars: 0.7263
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9151
+buildings: 0.9562
+low veg.: 0.7940
+trees: 0.9056
+cars: 0.7751
+clutter: 0.0000
+mean F1Score: 0.8692
+---
+Kappa: 0.8715
+[0.8434124  0.91599489 0.65834957 0.82740576 0.63284478 0.        ]
+mean MIoU: 0.7756
+---
+Validation @ epoch 26 iter 25500: mIoU 0.7756 (62.1 s)  (best 0.8055)
+[18:58:59] Train (epoch 26/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.123615	Accuracy: 93.29	Elapsed: 93.4 min
+[18:59:08] Train (epoch 26/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.194761	Accuracy: 90.75	Elapsed: 93.5 min
+[18:59:18] Train (epoch 26/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.191335	Accuracy: 97.94	Elapsed: 93.7 min
+[18:59:27] Train (epoch 26/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.226048	Accuracy: 89.43	Elapsed: 93.8 min
+[18:59:37] Train (epoch 26/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.181594	Accuracy: 93.12	Elapsed: 94.0 min
+Confusion matrix :
+[[4445997  123771  150593   64121   19883       0]
+ [ 197673 5171203   42113    8604    3306      48]
+ [ 192894   68648 2229033  411536     599       0]
+ [  47540    5919  289727 4049403     171       0]
+ [  28289    6631     155     827  112775       0]
+ [     18     326    5872       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.56
+roads: 0.9254
+buildings: 0.9536
+low veg.: 0.7679
+trees: 0.9218
+cars: 0.7585
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9151
+buildings: 0.9577
+low veg.: 0.7932
+trees: 0.9072
+cars: 0.7903
+clutter: 0.0000
+mean F1Score: 0.8727
+---
+Kappa: 0.8728
+[0.84351801 0.91879542 0.657305   0.83016178 0.65325309 0.        ]
+mean MIoU: 0.7806
+---
+Validation @ epoch 26 iter 26000: mIoU 0.7806 (61.9 s)  (best 0.8055)
+[19:00:48] Train (epoch 27/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.213333	Accuracy: 93.23	Elapsed: 95.2 min
+[19:00:58] Train (epoch 27/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.172509	Accuracy: 94.79	Elapsed: 95.4 min
+[19:01:07] Train (epoch 27/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.217142	Accuracy: 94.88	Elapsed: 95.5 min
+[19:01:17] Train (epoch 27/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.126933	Accuracy: 95.78	Elapsed: 95.7 min
+[19:01:26] Train (epoch 27/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.164611	Accuracy: 93.59	Elapsed: 95.8 min
+Confusion matrix :
+[[4461672  114762  147526   58186   22146      73]
+ [ 209242 5163179   36626    8499    5057     344]
+ [ 202036   65702 2225659  408823     490       0]
+ [  49968    5456  299684 4037518     134       0]
+ [  26659    5675     136     976  115103     128]
+ [     32     555    5629       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.53
+roads: 0.9287
+buildings: 0.9521
+low veg.: 0.7668
+trees: 0.9191
+cars: 0.7742
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9148
+buildings: 0.9581
+low veg.: 0.7923
+trees: 0.9066
+cars: 0.7894
+clutter: 0.0000
+mean F1Score: 0.8723
+---
+Kappa: 0.8724
+[0.8430494  0.91951733 0.65608931 0.82918786 0.65212686 0.        ]
+mean MIoU: 0.7800
+---
+Validation @ epoch 27 iter 26500: mIoU 0.7800 (62.1 s)  (best 0.8055)
+[19:02:38] Train (epoch 27/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.204148	Accuracy: 90.54	Elapsed: 97.0 min
+[19:02:47] Train (epoch 27/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.146257	Accuracy: 90.91	Elapsed: 97.2 min
+[19:02:57] Train (epoch 27/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.191108	Accuracy: 96.58	Elapsed: 97.3 min
+[19:03:07] Train (epoch 27/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.208066	Accuracy: 89.76	Elapsed: 97.5 min
+[19:03:16] Train (epoch 27/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.181580	Accuracy: 91.31	Elapsed: 97.7 min
+Confusion matrix :
+[[4416216  133767  168985   65683   19425     289]
+ [ 160274 5209456   39911    9441    3510     355]
+ [ 172521   65424 2220936  443299     530       0]
+ [  43119    5698  278851 4064981     111       0]
+ [  28787    6439     167     872  112100     312]
+ [     15     280    5921       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.64
+roads: 0.9192
+buildings: 0.9606
+low veg.: 0.7651
+trees: 0.9254
+cars: 0.7540
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9176
+buildings: 0.9608
+low veg.: 0.7907
+trees: 0.9056
+cars: 0.7885
+clutter: 0.0000
+mean F1Score: 0.8726
+---
+Kappa: 0.8739
+[0.84779177 0.924555   0.65388093 0.82755201 0.65078692 0.        ]
+mean MIoU: 0.7809
+---
+Validation @ epoch 27 iter 27000: mIoU 0.7809 (62.0 s)  (best 0.8055)
+[19:04:27] Train (epoch 28/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.198761	Accuracy: 92.01	Elapsed: 98.8 min
+[19:04:37] Train (epoch 28/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.186381	Accuracy: 94.73	Elapsed: 99.0 min
+[19:04:47] Train (epoch 28/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.237481	Accuracy: 89.79	Elapsed: 99.2 min
+[19:04:56] Train (epoch 28/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.156893	Accuracy: 95.41	Elapsed: 99.3 min
+[19:05:06] Train (epoch 28/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.150834	Accuracy: 88.04	Elapsed: 99.5 min
+Confusion matrix :
+[[4434733  138306  160176   53631   17404     115]
+ [ 156958 5217440   38034    8208    2033     274]
+ [ 175326   72106 2252904  401964     410       0]
+ [  53639    6292  301195 4031461     173       0]
+ [  29243    7689     198     814  110592     141]
+ [      3     172    6041       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.78
+roads: 0.9231
+buildings: 0.9621
+low veg.: 0.7761
+trees: 0.9178
+cars: 0.7438
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9187
+buildings: 0.9604
+low veg.: 0.7959
+trees: 0.9071
+cars: 0.7920
+clutter: 0.0000
+mean F1Score: 0.8748
+---
+Kappa: 0.8757
+[0.84964156 0.92384753 0.66099472 0.82996667 0.6555659  0.        ]
+mean MIoU: 0.7840
+---
+Validation @ epoch 28 iter 27500: mIoU 0.7840 (62.0 s)  (best 0.8055)
+[19:06:17] Train (epoch 28/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.176289	Accuracy: 100.00	Elapsed: 100.7 min
+[19:06:26] Train (epoch 28/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.161685	Accuracy: 95.21	Elapsed: 100.8 min
+[19:06:36] Train (epoch 28/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.192193	Accuracy: 94.29	Elapsed: 101.0 min
+[19:06:46] Train (epoch 28/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.162042	Accuracy: 94.91	Elapsed: 101.1 min
+[19:06:55] Train (epoch 28/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.170826	Accuracy: 91.57	Elapsed: 101.3 min
+Confusion matrix :
+[[4439993  131217  158268   57814   17073       0]
+ [ 187562 5186710   38174    8122    2272     107]
+ [ 188415   72681 2225840  415292     482       0]
+ [  50721    6402  285171 4050335     131       0]
+ [  30348    6822     204     933  110358      12]
+ [      1     381    5834       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.58
+roads: 0.9242
+buildings: 0.9564
+low veg.: 0.7668
+trees: 0.9220
+cars: 0.7423
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9153
+buildings: 0.9581
+low veg.: 0.7926
+trees: 0.9076
+cars: 0.7911
+clutter: 0.0000
+mean F1Score: 0.8730
+---
+Kappa: 0.8731
+[0.8438786  0.91955606 0.65652006 0.83085141 0.65441931 0.        ]
+mean MIoU: 0.7810
+---
+Validation @ epoch 28 iter 28000: mIoU 0.7810 (61.9 s)  (best 0.8055)
+[19:08:06] Train (epoch 29/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.250521	Accuracy: 89.83	Elapsed: 102.5 min
+[19:08:16] Train (epoch 29/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.209407	Accuracy: 92.04	Elapsed: 102.7 min
+[19:08:25] Train (epoch 29/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.202008	Accuracy: 92.07	Elapsed: 102.8 min
+[19:08:35] Train (epoch 29/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.150232	Accuracy: 94.04	Elapsed: 103.0 min
+[19:08:44] Train (epoch 29/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.191036	Accuracy: 92.73	Elapsed: 103.1 min
+Confusion matrix :
+[[4460124  123674  140047   63377   17143       0]
+ [ 181092 5198250   33102    8424    2079       0]
+ [ 220188   67580 2172235  442395     312       0]
+ [  50445    6528  293495 4042196      96       0]
+ [  31035    6383     141     924  110194       0]
+ [     41    1502    4673       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.41
+roads: 0.9283
+buildings: 0.9586
+low veg.: 0.7483
+trees: 0.9202
+cars: 0.7412
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9152
+buildings: 0.9603
+low veg.: 0.7833
+trees: 0.9033
+cars: 0.7913
+clutter: 0.0000
+mean F1Score: 0.8707
+---
+Kappa: 0.8707
+[0.84357556 0.92353997 0.64378389 0.82361345 0.65472024 0.        ]
+mean MIoU: 0.7778
+---
+Validation @ epoch 29 iter 28500: mIoU 0.7778 (62.0 s)  (best 0.8055)
+[19:09:56] Train (epoch 29/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.203776	Accuracy: 92.52	Elapsed: 104.3 min
+[19:10:05] Train (epoch 29/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.178983	Accuracy: 98.97	Elapsed: 104.5 min
+[19:10:15] Train (epoch 29/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.187677	Accuracy: 90.19	Elapsed: 104.6 min
+[19:10:24] Train (epoch 29/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.161073	Accuracy: 94.19	Elapsed: 104.8 min
+[19:10:34] Train (epoch 29/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.139012	Accuracy: 95.64	Elapsed: 105.0 min
+Confusion matrix :
+[[4455668  117825  154783   59814   16275       0]
+ [ 183894 5191252   37725    8406    1670       0]
+ [ 195962   70868 2214447  421079     354       0]
+ [  49578    6644  289124 4047327      87       0]
+ [  30981    7247     204     864  109340      41]
+ [      5     281    5930       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.61
+roads: 0.9274
+buildings: 0.9573
+low veg.: 0.7629
+trees: 0.9214
+cars: 0.7354
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9168
+buildings: 0.9598
+low veg.: 0.7902
+trees: 0.9064
+cars: 0.7912
+clutter: 0.0000
+mean F1Score: 0.8729
+---
+Kappa: 0.8735
+[0.84631528 0.92275604 0.65313749 0.82887381 0.65448364 0.        ]
+mean MIoU: 0.7811
+---
+Validation @ epoch 29 iter 29000: mIoU 0.7811 (61.9 s)  (best 0.8055)
+[19:11:45] Train (epoch 30/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.200238	Accuracy: 95.68	Elapsed: 106.1 min
+[19:11:55] Train (epoch 30/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.193337	Accuracy: 94.60	Elapsed: 106.3 min
+[19:12:04] Train (epoch 30/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.171378	Accuracy: 91.69	Elapsed: 106.5 min
+[19:12:14] Train (epoch 30/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.139778	Accuracy: 94.10	Elapsed: 106.6 min
+[19:12:23] Train (epoch 30/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.155589	Accuracy: 88.21	Elapsed: 106.8 min
+Confusion matrix :
+[[4440802  139948  145300   59190   19125       0]
+ [ 160217 5218201   33212    8922    2395       0]
+ [ 189435   80107 2200742  431978     448       0]
+ [  48855    7871  282106 4053722     206       0]
+ [  29122    6070     181     822  112473       9]
+ [     27     202    5987       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.66
+roads: 0.9243
+buildings: 0.9622
+low veg.: 0.7582
+trees: 0.9228
+cars: 0.7565
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9182
+buildings: 0.9596
+low veg.: 0.7902
+trees: 0.9061
+cars: 0.7940
+clutter: 0.0000
+mean F1Score: 0.8736
+---
+Kappa: 0.8740
+[0.84877373 0.92240892 0.65313685 0.82835997 0.65831046 0.        ]
+mean MIoU: 0.7822
+---
+Validation @ epoch 30 iter 29500: mIoU 0.7822 (62.0 s)  (best 0.8055)
+[19:13:35] Train (epoch 30/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.186726	Accuracy: 83.68	Elapsed: 108.0 min
+[19:13:44] Train (epoch 30/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.165686	Accuracy: 93.84	Elapsed: 108.1 min
+[19:13:54] Train (epoch 30/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.161210	Accuracy: 89.47	Elapsed: 108.3 min
+[19:14:03] Train (epoch 30/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.164873	Accuracy: 86.20	Elapsed: 108.4 min
+[19:14:13] Train (epoch 30/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.214032	Accuracy: 88.23	Elapsed: 108.6 min
+Confusion matrix :
+[[4420811  129451  175338   62038   16727       0]
+ [ 172494 5201223   38245    9079    1906       0]
+ [ 179129   67391 2233508  422340     342       0]
+ [  44482    6332  299213 4042659      74       0]
+ [  31914    7210     336     923  108286       8]
+ [     32     449    5735       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.55
+roads: 0.9202
+buildings: 0.9591
+low veg.: 0.7695
+trees: 0.9203
+cars: 0.7283
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9159
+buildings: 0.9601
+low veg.: 0.7899
+trees: 0.9054
+cars: 0.7846
+clutter: 0.0000
+mean F1Score: 0.8712
+---
+Kappa: 0.8726
+[0.84488905 0.92322082 0.65277151 0.82720344 0.64561249 0.        ]
+mean MIoU: 0.7787
+---
+Validation @ epoch 30 iter 30000: mIoU 0.7787 (61.9 s)  (best 0.8055)
+[19:15:24] Train (epoch 31/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.185057	Accuracy: 91.76	Elapsed: 109.8 min
+[19:15:34] Train (epoch 31/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.213575	Accuracy: 92.73	Elapsed: 110.0 min
+[19:15:43] Train (epoch 31/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.130408	Accuracy: 95.90	Elapsed: 110.1 min
+[19:15:53] Train (epoch 31/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.181821	Accuracy: 82.16	Elapsed: 110.3 min
+[19:16:02] Train (epoch 31/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.152083	Accuracy: 97.04	Elapsed: 110.4 min
+Confusion matrix :
+[[4429532  139583  150137   66259   18854       0]
+ [ 158585 5214934   38337    9461    1630       0]
+ [ 195399   65152 2202285  439568     306       0]
+ [  49116    6440  284781 4052201     222       0]
+ [  28628    6855     162     815  112217       0]
+ [     29    1289    4898       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.57
+roads: 0.9220
+buildings: 0.9616
+low veg.: 0.7587
+trees: 0.9225
+cars: 0.7548
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9166
+buildings: 0.9606
+low veg.: 0.7889
+trees: 0.9044
+cars: 0.7961
+clutter: 0.0000
+mean F1Score: 0.8733
+---
+Kappa: 0.8729
+[0.84595661 0.92426234 0.65136608 0.82548668 0.66130981 0.        ]
+mean MIoU: 0.7817
+---
+Validation @ epoch 31 iter 30500: mIoU 0.7817 (61.9 s)  (best 0.8055)
+[19:17:14] Train (epoch 31/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.198917	Accuracy: 93.89	Elapsed: 111.6 min
+[19:17:23] Train (epoch 31/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.181111	Accuracy: 94.80	Elapsed: 111.8 min
+[19:17:33] Train (epoch 31/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.180272	Accuracy: 98.12	Elapsed: 111.9 min
+[19:17:42] Train (epoch 31/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.200183	Accuracy: 93.19	Elapsed: 112.1 min
+[19:17:52] Train (epoch 31/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.162494	Accuracy: 93.46	Elapsed: 112.3 min
+Confusion matrix :
+[[4449824  123025  153973   58528   19015       0]
+ [ 189972 5184165   37170    8677    2939      24]
+ [ 195598   62586 2242544  401583     399       0]
+ [  47093    6161  310424 4028918     164       0]
+ [  29252    5509     166     765  112985       0]
+ [     94     737    5385       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.61
+roads: 0.9262
+buildings: 0.9560
+low veg.: 0.7726
+trees: 0.9172
+cars: 0.7599
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9160
+buildings: 0.9596
+low veg.: 0.7935
+trees: 0.9063
+cars: 0.7952
+clutter: 0.0000
+mean F1Score: 0.8741
+---
+Kappa: 0.8735
+[0.84495024 0.92229092 0.65767071 0.82860112 0.65998224 0.        ]
+mean MIoU: 0.7827
+---
+Validation @ epoch 31 iter 31000: mIoU 0.7827 (62.0 s)  (best 0.8055)
+[19:19:03] Train (epoch 32/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.163762	Accuracy: 96.48	Elapsed: 113.4 min
+[19:19:13] Train (epoch 32/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.158024	Accuracy: 86.81	Elapsed: 113.6 min
+[19:19:22] Train (epoch 32/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.132485	Accuracy: 96.58	Elapsed: 113.8 min
+[19:19:32] Train (epoch 32/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.194264	Accuracy: 92.20	Elapsed: 113.9 min
+[19:19:41] Train (epoch 32/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.135451	Accuracy: 92.70	Elapsed: 114.1 min
+Confusion matrix :
+[[4417885  124304  181277   64236   16645      18]
+ [ 183550 5184564   42404    9430    2974      25]
+ [ 170516   62571 2210655  458538     430       0]
+ [  44370    4923  264590 4078734     143       0]
+ [  32697    5170     177     893  109717      23]
+ [     50      35    6131       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.52
+roads: 0.9196
+buildings: 0.9560
+low veg.: 0.7616
+trees: 0.9285
+cars: 0.7380
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9153
+buildings: 0.9597
+low veg.: 0.7884
+trees: 0.9059
+cars: 0.7877
+clutter: 0.0000
+mean F1Score: 0.8714
+---
+Kappa: 0.8722
+[0.84382475 0.92252849 0.65071149 0.82802526 0.64971664 0.        ]
+mean MIoU: 0.7790
+---
+Validation @ epoch 32 iter 31500: mIoU 0.7790 (62.0 s)  (best 0.8055)
+[19:20:53] Train (epoch 32/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.190644	Accuracy: 98.08	Elapsed: 115.3 min
+[19:21:02] Train (epoch 32/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.159740	Accuracy: 96.48	Elapsed: 115.4 min
+[19:21:12] Train (epoch 32/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.153490	Accuracy: 94.82	Elapsed: 115.6 min
+[19:21:21] Train (epoch 32/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.134937	Accuracy: 98.36	Elapsed: 115.7 min
+[19:21:31] Train (epoch 32/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.147716	Accuracy: 95.97	Elapsed: 115.9 min
+Confusion matrix :
+[[4436406  139835  144813   65390   17834      87]
+ [ 163967 5213909   33067    9511    2429      64]
+ [ 201888   74367 2179461  446623     371       0]
+ [  46935    6664  270855 4068181     125       0]
+ [  30325    5687     149     910  111500     106]
+ [    152     207    5857       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.56
+roads: 0.9234
+buildings: 0.9615
+low veg.: 0.7508
+trees: 0.9261
+cars: 0.7499
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9162
+buildings: 0.9599
+low veg.: 0.7872
+trees: 0.9057
+cars: 0.7938
+clutter: 0.0000
+mean F1Score: 0.8726
+---
+Kappa: 0.8727
+[0.84541103 0.92286361 0.64914157 0.82767455 0.65806558 0.        ]
+mean MIoU: 0.7806
+---
+Validation @ epoch 32 iter 32000: mIoU 0.7806 (61.9 s)  (best 0.8055)
+[19:22:42] Train (epoch 33/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.164307	Accuracy: 92.11	Elapsed: 117.1 min
+[19:22:52] Train (epoch 33/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.148088	Accuracy: 92.45	Elapsed: 117.2 min
+[19:23:01] Train (epoch 33/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.153310	Accuracy: 94.29	Elapsed: 117.4 min
+[19:23:11] Train (epoch 33/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.167376	Accuracy: 91.97	Elapsed: 117.6 min
+[19:23:20] Train (epoch 33/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.152537	Accuracy: 97.00	Elapsed: 117.7 min
+Confusion matrix :
+[[4446871  118965  158560   60535   19434       0]
+ [ 187709 5188065   35524    8413    3236       0]
+ [ 200826   66937 2218362  416293     292       0]
+ [  48253    7391  296544 4040432     140       0]
+ [  26740    5671     174     874  115218       0]
+ [     89     692    5435       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.56
+roads: 0.9256
+buildings: 0.9567
+low veg.: 0.7642
+trees: 0.9198
+cars: 0.7750
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9155
+buildings: 0.9598
+low veg.: 0.7898
+trees: 0.9060
+cars: 0.8029
+clutter: 0.0000
+mean F1Score: 0.8748
+---
+Kappa: 0.8728
+[0.84413178 0.92271587 0.65266154 0.82814829 0.67073391 0.        ]
+mean MIoU: 0.7837
+---
+Validation @ epoch 33 iter 32500: mIoU 0.7837 (62.0 s)  (best 0.8055)
+[19:24:31] Train (epoch 33/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.177144	Accuracy: 92.70	Elapsed: 118.9 min
+[19:24:41] Train (epoch 33/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.192955	Accuracy: 98.97	Elapsed: 119.1 min
+[19:24:50] Train (epoch 33/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.171923	Accuracy: 95.00	Elapsed: 119.2 min
+[19:25:00] Train (epoch 33/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.162387	Accuracy: 87.69	Elapsed: 119.4 min
+[19:25:09] Train (epoch 33/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.161662	Accuracy: 93.00	Elapsed: 119.5 min
+Confusion matrix :
+[[4437079  133222  158278   60238   15548       0]
+ [ 175239 5199237   37150    9662    1487     172]
+ [ 188748   65151 2211848  436576     387       0]
+ [  48733    5644  296089 4042105     189       0]
+ [  31173    6263     181     874  110126      60]
+ [     80     774    5362       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.51
+roads: 0.9236
+buildings: 0.9587
+low veg.: 0.7620
+trees: 0.9202
+cars: 0.7407
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9162
+buildings: 0.9599
+low veg.: 0.7883
+trees: 0.9041
+cars: 0.7968
+clutter: 0.0000
+mean F1Score: 0.8731
+---
+Kappa: 0.8721
+[0.84542554 0.9228321  0.65058754 0.82490087 0.66226066 0.        ]
+mean MIoU: 0.7812
+---
+Validation @ epoch 33 iter 33000: mIoU 0.7812 (61.9 s)  (best 0.8055)
+[19:26:21] Train (epoch 34/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.167360	Accuracy: 97.59	Elapsed: 120.7 min
+[19:26:30] Train (epoch 34/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.156586	Accuracy: 96.43	Elapsed: 120.9 min
+[19:26:40] Train (epoch 34/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.189965	Accuracy: 87.47	Elapsed: 121.1 min
+[19:26:49] Train (epoch 34/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.180870	Accuracy: 90.01	Elapsed: 121.2 min
+[19:26:59] Train (epoch 34/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.161805	Accuracy: 94.53	Elapsed: 121.4 min
+Confusion matrix :
+[[4386642  163709  168920   68548   16517      29]
+ [ 126937 5251390   33748    9470    1402       0]
+ [ 163065   81661 2228345  429343     296       0]
+ [  38477    6882  297267 4050018     116       0]
+ [  29931    7998     179     990  109445     134]
+ [     13     840    5363       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.66
+roads: 0.9131
+buildings: 0.9684
+low veg.: 0.7677
+trees: 0.9220
+cars: 0.7361
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9187
+buildings: 0.9604
+low veg.: 0.7907
+trees: 0.9049
+cars: 0.7918
+clutter: 0.0000
+mean F1Score: 0.8733
+---
+Kappa: 0.8740
+[0.84966534 0.92388385 0.65382123 0.82634692 0.65532789 0.        ]
+mean MIoU: 0.7818
+---
+Validation @ epoch 34 iter 33500: mIoU 0.7818 (62.1 s)  (best 0.8055)
+[19:28:10] Train (epoch 34/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.187672	Accuracy: 85.99	Elapsed: 122.6 min
+[19:28:20] Train (epoch 34/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.194332	Accuracy: 93.13	Elapsed: 122.7 min
+[19:28:29] Train (epoch 34/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.130700	Accuracy: 94.87	Elapsed: 122.9 min
+[19:28:39] Train (epoch 34/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.168993	Accuracy: 91.60	Elapsed: 123.0 min
+[19:28:48] Train (epoch 34/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.119819	Accuracy: 98.12	Elapsed: 123.2 min
+Confusion matrix :
+[[4431842  149694  146530   56536   19735      28]
+ [ 169091 5213328   30844    7378    2306       0]
+ [ 210501   84582 2195494  411658     475       0]
+ [  49986    7772  299368 4035476     158       0]
+ [  27170    6275     207     728  114297       0]
+ [     58     683    5475       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.46
+roads: 0.9225
+buildings: 0.9613
+low veg.: 0.7564
+trees: 0.9187
+cars: 0.7688
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9144
+buildings: 0.9579
+low veg.: 0.7868
+trees: 0.9064
+cars: 0.8003
+clutter: 0.0000
+mean F1Score: 0.8732
+---
+Kappa: 0.8713
+[0.84236798 0.91914161 0.6485693  0.82879981 0.66703433 0.        ]
+mean MIoU: 0.7812
+---
+Validation @ epoch 34 iter 34000: mIoU 0.7812 (62.1 s)  (best 0.8055)
+[19:30:00] Train (epoch 35/50) [0/1000 (0%)]	Lr: 0.001000	Loss: 0.168449	Accuracy: 91.82	Elapsed: 124.4 min
+[19:30:09] Train (epoch 35/50) [100/1000 (10%)]	Lr: 0.001000	Loss: 0.195958	Accuracy: 94.40	Elapsed: 124.5 min
+[19:30:19] Train (epoch 35/50) [200/1000 (20%)]	Lr: 0.001000	Loss: 0.173621	Accuracy: 92.11	Elapsed: 124.7 min
+[19:30:29] Train (epoch 35/50) [300/1000 (30%)]	Lr: 0.001000	Loss: 0.127733	Accuracy: 94.08	Elapsed: 124.9 min
+[19:30:38] Train (epoch 35/50) [400/1000 (40%)]	Lr: 0.001000	Loss: 0.128189	Accuracy: 96.53	Elapsed: 125.0 min
+Confusion matrix :
+[[4396682  125796  203328   60840   17719       0]
+ [ 183224 5183387   45960    8030    2346       0]
+ [ 151189   62636 2291913  396660     312       0]
+ [  42890    6601  324724 4018365     180       0]
+ [  30804    6154     452     755  110512       0]
+ [     30     824    5362       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.51
+roads: 0.9151
+buildings: 0.9558
+low veg.: 0.7896
+trees: 0.9148
+cars: 0.7433
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9151
+buildings: 0.9591
+low veg.: 0.7938
+trees: 0.9053
+cars: 0.7901
+clutter: 0.0000
+mean F1Score: 0.8727
+---
+Kappa: 0.8723
+[0.84348783 0.9214979  0.6581161  0.82698658 0.65301299 0.        ]
+mean MIoU: 0.7806
+---
+Validation @ epoch 35 iter 34500: mIoU 0.7806 (62.0 s)  (best 0.8055)
+[19:31:49] Train (epoch 35/50) [500/1000 (50%)]	Lr: 0.001000	Loss: 0.179367	Accuracy: 94.68	Elapsed: 126.2 min
+[19:31:59] Train (epoch 35/50) [600/1000 (60%)]	Lr: 0.001000	Loss: 0.173254	Accuracy: 91.81	Elapsed: 126.4 min
+[19:32:08] Train (epoch 35/50) [700/1000 (70%)]	Lr: 0.001000	Loss: 0.146361	Accuracy: 92.86	Elapsed: 126.5 min
+[19:32:18] Train (epoch 35/50) [800/1000 (80%)]	Lr: 0.001000	Loss: 0.186554	Accuracy: 93.79	Elapsed: 126.7 min
+[19:32:27] Train (epoch 35/50) [900/1000 (90%)]	Lr: 0.001000	Loss: 0.144206	Accuracy: 94.16	Elapsed: 126.8 min
+Confusion matrix :
+[[4435442  131546  156941   63461   16975       0]
+ [ 159293 5214838   36915    9157    2744       0]
+ [ 191043   66499 2206233  438662     273       0]
+ [  51518    6602  287757 4046784      99       0]
+ [  31226    5012     181     931  111324       3]
+ [    107    1120    4989       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.59
+roads: 0.9232
+buildings: 0.9616
+low veg.: 0.7601
+trees: 0.9212
+cars: 0.7488
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9171
+buildings: 0.9614
+low veg.: 0.7885
+trees: 0.9041
+cars: 0.7949
+clutter: 0.0000
+mean F1Score: 0.8732
+---
+Kappa: 0.8732
+[0.84685403 0.92564637 0.65090354 0.82503729 0.65962742 0.        ]
+mean MIoU: 0.7816
+---
+Validation @ epoch 35 iter 35000: mIoU 0.7816 (62.0 s)  (best 0.8055)
+[19:33:39] Train (epoch 36/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.181790	Accuracy: 94.41	Elapsed: 128.0 min
+[19:33:48] Train (epoch 36/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.149935	Accuracy: 96.86	Elapsed: 128.2 min
+[19:33:58] Train (epoch 36/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.159118	Accuracy: 95.29	Elapsed: 128.4 min
+[19:34:07] Train (epoch 36/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.179090	Accuracy: 94.50	Elapsed: 128.5 min
+[19:34:17] Train (epoch 36/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.171454	Accuracy: 92.30	Elapsed: 128.7 min
+Confusion matrix :
+[[4445364  122567  162759   57471   16204       0]
+ [ 176394 5199514   37188    8159    1692       0]
+ [ 196565   64541 2231919  409460     225       0]
+ [  49958    6470  301924 4034292     116       0]
+ [  30319    6454     365     874  110624      41]
+ [     84    1193    4939       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.63
+roads: 0.9253
+buildings: 0.9588
+low veg.: 0.7689
+trees: 0.9184
+cars: 0.7441
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9163
+buildings: 0.9608
+low veg.: 0.7912
+trees: 0.9063
+cars: 0.7972
+clutter: 0.0000
+mean F1Score: 0.8743
+---
+Kappa: 0.8738
+[0.84549835 0.92449413 0.65454377 0.82861382 0.66276046 0.        ]
+mean MIoU: 0.7832
+---
+Validation @ epoch 36 iter 35500: mIoU 0.7832 (61.9 s)  (best 0.8055)
+[19:35:28] Train (epoch 36/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.178815	Accuracy: 91.69	Elapsed: 129.9 min
+[19:35:38] Train (epoch 36/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.188623	Accuracy: 93.73	Elapsed: 130.0 min
+[19:35:47] Train (epoch 36/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.188981	Accuracy: 94.64	Elapsed: 130.2 min
+[19:35:57] Train (epoch 36/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.127969	Accuracy: 97.99	Elapsed: 130.3 min
+[19:36:06] Train (epoch 36/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.218308	Accuracy: 93.67	Elapsed: 130.5 min
+Confusion matrix :
+[[4436306  128569  163292   59797   16401       0]
+ [ 169965 5205880   37143    8219    1740       0]
+ [ 192915   68695 2229894  410946     260       0]
+ [  47661    6915  298911 4039165     108       0]
+ [  30506    5999     373     916  110869      14]
+ [     64     905    5247       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.63
+roads: 0.9234
+buildings: 0.9600
+low veg.: 0.7682
+trees: 0.9195
+cars: 0.7457
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9164
+buildings: 0.9605
+low veg.: 0.7911
+trees: 0.9065
+cars: 0.7975
+clutter: 0.0000
+mean F1Score: 0.8744
+---
+Kappa: 0.8738
+[0.84573945 0.92400644 0.65437383 0.8289483  0.66314763 0.        ]
+mean MIoU: 0.7832
+---
+Validation @ epoch 36 iter 36000: mIoU 0.7832 (62.0 s)  (best 0.8055)
+[19:37:18] Train (epoch 37/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.127628	Accuracy: 97.61	Elapsed: 131.7 min
+[19:37:27] Train (epoch 37/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.124239	Accuracy: 91.02	Elapsed: 131.8 min
+[19:37:37] Train (epoch 37/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.167359	Accuracy: 91.24	Elapsed: 132.0 min
+[19:37:46] Train (epoch 37/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.182287	Accuracy: 94.92	Elapsed: 132.2 min
+[19:37:56] Train (epoch 37/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.154588	Accuracy: 94.45	Elapsed: 132.3 min
+Confusion matrix :
+[[4437215  125547  161578   62942   17083       0]
+ [ 175932 5198503   37825    8717    1970       0]
+ [ 191783   64378 2225486  420810     253       0]
+ [  46501    6127  295460 4044551     121       0]
+ [  29743    6115     277     891  111647       4]
+ [     66    1036    5114       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.61
+roads: 0.9236
+buildings: 0.9586
+low veg.: 0.7667
+trees: 0.9207
+cars: 0.7509
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9162
+buildings: 0.9605
+low veg.: 0.7908
+trees: 0.9058
+cars: 0.7982
+clutter: 0.0000
+mean F1Score: 0.8743
+---
+Kappa: 0.8734
+[0.84544308 0.92398941 0.65398459 0.82776334 0.66415433 0.        ]
+mean MIoU: 0.7831
+---
+Validation @ epoch 37 iter 36500: mIoU 0.7831 (62.0 s)  (best 0.8055)
+[19:39:07] Train (epoch 37/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.187900	Accuracy: 89.50	Elapsed: 133.5 min
+[19:39:17] Train (epoch 37/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.166735	Accuracy: 94.71	Elapsed: 133.7 min
+[19:39:26] Train (epoch 37/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.138205	Accuracy: 93.98	Elapsed: 133.8 min
+[19:39:36] Train (epoch 37/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.164043	Accuracy: 91.56	Elapsed: 134.0 min
+[19:39:46] Train (epoch 37/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.136504	Accuracy: 89.97	Elapsed: 134.1 min
+Confusion matrix :
+[[4419303  137253  165047   65544   17203      15]
+ [ 159785 5215994   36085    9073    2010       0]
+ [ 181210   70761 2214471  435979     289       0]
+ [  44530    6881  285655 4055566     128       0]
+ [  29550    6317     233     951  111532      94]
+ [     51     777    5388       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.61
+roads: 0.9199
+buildings: 0.9618
+low veg.: 0.7629
+trees: 0.9232
+cars: 0.7502
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9170
+buildings: 0.9605
+low veg.: 0.7895
+trees: 0.9053
+cars: 0.7971
+clutter: 0.0000
+mean F1Score: 0.8739
+---
+Kappa: 0.8734
+[0.84669233 0.92401296 0.65225156 0.82693967 0.66267    0.        ]
+mean MIoU: 0.7825
+---
+Validation @ epoch 37 iter 37000: mIoU 0.7825 (61.9 s)  (best 0.8055)
+[19:40:57] Train (epoch 38/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.100160	Accuracy: 93.14	Elapsed: 135.3 min
+[19:41:06] Train (epoch 38/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.135637	Accuracy: 90.46	Elapsed: 135.5 min
+[19:41:16] Train (epoch 38/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.128128	Accuracy: 96.61	Elapsed: 135.7 min
+[19:41:25] Train (epoch 38/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.167170	Accuracy: 92.23	Elapsed: 135.8 min
+[19:41:35] Train (epoch 38/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.149149	Accuracy: 95.20	Elapsed: 136.0 min
+Confusion matrix :
+[[4425604  133548  163532   64726   16955       0]
+ [ 165164 5210376   36429    9325    1653       0]
+ [ 185896   67702 2209815  439033     264       0]
+ [  45485    6779  279615 4060760     121       0]
+ [  30010    6553     291     937  110877       9]
+ [     46     804    5366       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.61
+roads: 0.9212
+buildings: 0.9608
+low veg.: 0.7613
+trees: 0.9244
+cars: 0.7458
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9166
+buildings: 0.9606
+low veg.: 0.7895
+trees: 0.9057
+cars: 0.7961
+clutter: 0.0000
+mean F1Score: 0.8737
+---
+Kappa: 0.8734
+[0.84603953 0.92409867 0.65225861 0.82758126 0.66128109 0.        ]
+mean MIoU: 0.7823
+---
+Validation @ epoch 38 iter 37500: mIoU 0.7823 (62.1 s)  (best 0.8055)
+[19:42:46] Train (epoch 38/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.123522	Accuracy: 95.38	Elapsed: 137.2 min
+[19:42:56] Train (epoch 38/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.135172	Accuracy: 93.11	Elapsed: 137.3 min
+[19:43:06] Train (epoch 38/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.140031	Accuracy: 92.58	Elapsed: 137.5 min
+[19:43:15] Train (epoch 38/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.118820	Accuracy: 91.03	Elapsed: 137.6 min
+[19:43:25] Train (epoch 38/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.183611	Accuracy: 88.62	Elapsed: 137.8 min
+Confusion matrix :
+[[4431171  135020  160029   60899   17246       0]
+ [ 168821 5208882   34673    8536    2035       0]
+ [ 192285   71309 2209490  429294     332       0]
+ [  48986    7098  284076 4052451     149       0]
+ [  29620    6239     223     855  111737       3]
+ [     89    1116    5011       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.59
+roads: 0.9223
+buildings: 0.9605
+low veg.: 0.7612
+trees: 0.9225
+cars: 0.7515
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9160
+buildings: 0.9599
+low veg.: 0.7896
+trees: 0.9061
+cars: 0.7976
+clutter: 0.0000
+mean F1Score: 0.8739
+---
+Kappa: 0.8731
+[0.84497154 0.92295041 0.65239781 0.82832503 0.66336775 0.        ]
+mean MIoU: 0.7824
+---
+Validation @ epoch 38 iter 38000: mIoU 0.7824 (62.1 s)  (best 0.8055)
+[19:44:36] Train (epoch 39/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.152077	Accuracy: 94.21	Elapsed: 139.0 min
+[19:44:46] Train (epoch 39/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.150756	Accuracy: 92.06	Elapsed: 139.2 min
+[19:44:55] Train (epoch 39/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.143836	Accuracy: 94.50	Elapsed: 139.3 min
+[19:45:05] Train (epoch 39/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.123416	Accuracy: 96.19	Elapsed: 139.5 min
+[19:45:14] Train (epoch 39/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.164104	Accuracy: 93.48	Elapsed: 139.6 min
+Confusion matrix :
+[[4427865  132232  164735   61956   17577       0]
+ [ 161291 5215608   35581    8628    1839       0]
+ [ 187524   71362 2220631  422924     269       0]
+ [  46542    7103  291088 4047895     132       0]
+ [  29037    6355     268     869  112119      29]
+ [     55    1107    5054       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.65
+roads: 0.9216
+buildings: 0.9618
+low veg.: 0.7650
+trees: 0.9215
+cars: 0.7541
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9171
+buildings: 0.9608
+low veg.: 0.7903
+trees: 0.9061
+cars: 0.7991
+clutter: 0.0000
+mean F1Score: 0.8747
+---
+Kappa: 0.8739
+[0.84682014 0.92457188 0.65323512 0.82827533 0.66541835 0.        ]
+mean MIoU: 0.7837
+---
+Validation @ epoch 39 iter 38500: mIoU 0.7837 (61.9 s)  (best 0.8055)
+[19:46:26] Train (epoch 39/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.176818	Accuracy: 90.28	Elapsed: 140.8 min
+[19:46:35] Train (epoch 39/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.178211	Accuracy: 94.51	Elapsed: 141.0 min
+[19:46:45] Train (epoch 39/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.169916	Accuracy: 97.04	Elapsed: 141.1 min
+[19:46:54] Train (epoch 39/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.161138	Accuracy: 95.37	Elapsed: 141.3 min
+[19:47:04] Train (epoch 39/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.156138	Accuracy: 96.69	Elapsed: 141.5 min
+Confusion matrix :
+[[4437700  130530  160622   59097   16415       1]
+ [ 164639 5212867   35207    8634    1600       0]
+ [ 191180   69188 2222286  419792     264       0]
+ [  49350    7025  295897 4040362     126       0]
+ [  29840    6573     233     875  111063      93]
+ [     85    1217    4914       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.65
+roads: 0.9237
+buildings: 0.9613
+low veg.: 0.7656
+trees: 0.9198
+cars: 0.7470
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9171
+buildings: 0.9609
+low veg.: 0.7906
+trees: 0.9058
+cars: 0.7986
+clutter: 0.0000
+mean F1Score: 0.8746
+---
+Kappa: 0.8739
+[0.84697676 0.92468035 0.6536937  0.82774661 0.66472151 0.        ]
+mean MIoU: 0.7836
+---
+Validation @ epoch 39 iter 39000: mIoU 0.7836 (62.0 s)  (best 0.8055)
+[19:48:15] Train (epoch 40/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.149624	Accuracy: 92.46	Elapsed: 142.6 min
+[19:48:25] Train (epoch 40/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.226228	Accuracy: 94.80	Elapsed: 142.8 min
+[19:48:34] Train (epoch 40/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.162517	Accuracy: 91.71	Elapsed: 143.0 min
+[19:48:44] Train (epoch 40/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.168242	Accuracy: 90.66	Elapsed: 143.1 min
+[19:48:53] Train (epoch 40/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.162847	Accuracy: 100.00	Elapsed: 143.3 min
+Confusion matrix :
+[[4418493  141451  164089   62232   18094       6]
+ [ 153417 5225295   34274    8053    1908       0]
+ [ 182639   72923 2235900  410955     293       0]
+ [  44005    7457  304212 4036944     142       0]
+ [  27938    6636     208     895  112920      80]
+ [     75    1060    5081       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.68
+roads: 0.9197
+buildings: 0.9636
+low veg.: 0.7703
+trees: 0.9190
+cars: 0.7595
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9176
+buildings: 0.9607
+low veg.: 0.7920
+trees: 0.9060
+cars: 0.8008
+clutter: 0.0000
+mean F1Score: 0.8754
+---
+Kappa: 0.8744
+[0.84768244 0.92442619 0.6555788  0.82810891 0.66771527 0.        ]
+mean MIoU: 0.7847
+---
+Validation @ epoch 40 iter 39500: mIoU 0.7847 (62.1 s)  (best 0.8055)
+[19:50:05] Train (epoch 40/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.161114	Accuracy: 100.00	Elapsed: 144.5 min
+[19:50:14] Train (epoch 40/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.186882	Accuracy: 88.42	Elapsed: 144.6 min
+[19:50:24] Train (epoch 40/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.166600	Accuracy: 88.39	Elapsed: 144.8 min
+[19:50:33] Train (epoch 40/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.146108	Accuracy: 83.41	Elapsed: 144.9 min
+[19:50:43] Train (epoch 40/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.162579	Accuracy: 92.95	Elapsed: 145.1 min
+Confusion matrix :
+[[4432525  127848  168206   58378   17404       4]
+ [ 169192 5206532   37249    8114    1860       0]
+ [ 184234   70423 2246609  401186     258       0]
+ [  46750    7021  307080 4031780     129       0]
+ [  29409    6152     377     859  111804      76]
+ [     74    1082    5060       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.68
+roads: 0.9226
+buildings: 0.9601
+low veg.: 0.7740
+trees: 0.9178
+cars: 0.7520
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9171
+buildings: 0.9604
+low veg.: 0.7928
+trees: 0.9067
+cars: 0.7982
+clutter: 0.0000
+mean F1Score: 0.8751
+---
+Kappa: 0.8744
+[0.84686753 0.92388554 0.65677225 0.82936303 0.66420322 0.        ]
+mean MIoU: 0.7842
+---
+Validation @ epoch 40 iter 40000: mIoU 0.7842 (62.0 s)  (best 0.8055)
+[19:51:54] Train (epoch 41/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.167937	Accuracy: 93.76	Elapsed: 146.3 min
+[19:52:04] Train (epoch 41/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.164577	Accuracy: 98.48	Elapsed: 146.5 min
+[19:52:13] Train (epoch 41/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.151155	Accuracy: 92.71	Elapsed: 146.6 min
+[19:52:23] Train (epoch 41/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.151960	Accuracy: 98.65	Elapsed: 146.8 min
+[19:52:32] Train (epoch 41/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.133252	Accuracy: 95.85	Elapsed: 146.9 min
+Confusion matrix :
+[[4432884  133351  156125   64219   17786       0]
+ [ 164474 5213833   34150    8860    1630       0]
+ [ 192638   71471 2204577  433753     271       0]
+ [  45709    7374  282214 4057331     132       0]
+ [  28426    6332     292     919  112703       5]
+ [     72     951    5193       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.63
+roads: 0.9227
+buildings: 0.9614
+low veg.: 0.7595
+trees: 0.9236
+cars: 0.7580
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9170
+buildings: 0.9605
+low veg.: 0.7894
+trees: 0.9059
+cars: 0.8016
+clutter: 0.0000
+mean F1Score: 0.8749
+---
+Kappa: 0.8737
+[0.8466676  0.92404101 0.65210975 0.82794039 0.66887641 0.        ]
+mean MIoU: 0.7839
+---
+Validation @ epoch 41 iter 40500: mIoU 0.7839 (61.9 s)  (best 0.8055)
+[19:53:43] Train (epoch 41/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.143950	Accuracy: 92.05	Elapsed: 148.1 min
+[19:53:53] Train (epoch 41/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.134466	Accuracy: 93.78	Elapsed: 148.3 min
+[19:54:03] Train (epoch 41/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.164875	Accuracy: 93.68	Elapsed: 148.4 min
+[19:54:12] Train (epoch 41/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.157490	Accuracy: 91.93	Elapsed: 148.6 min
+[19:54:22] Train (epoch 41/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.171824	Accuracy: 91.51	Elapsed: 148.8 min
+Confusion matrix :
+[[4428389  136020  155299   66843   17783      31]
+ [ 166119 5211348   34232    9331    1917       0]
+ [ 189037   71861 2184401  457121     290       0]
+ [  46761    7331  265392 4073147     129       0]
+ [  28745    6217     195     973  112494      53]
+ [     65     874    5277       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.56
+roads: 0.9217
+buildings: 0.9610
+low veg.: 0.7525
+trees: 0.9272
+cars: 0.7566
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9165
+buildings: 0.9600
+low veg.: 0.7875
+trees: 0.9051
+cars: 0.7998
+clutter: 0.0000
+mean F1Score: 0.8738
+---
+Kappa: 0.8728
+[0.84590471 0.92313857 0.64951912 0.82669451 0.66644944 0.        ]
+mean MIoU: 0.7823
+---
+Validation @ epoch 41 iter 41000: mIoU 0.7823 (62.0 s)  (best 0.8055)
+[19:55:33] Train (epoch 42/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.182069	Accuracy: 97.27	Elapsed: 149.9 min
+[19:55:43] Train (epoch 42/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.144394	Accuracy: 95.25	Elapsed: 150.1 min
+[19:55:52] Train (epoch 42/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.151422	Accuracy: 93.58	Elapsed: 150.3 min
+[19:56:02] Train (epoch 42/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.163045	Accuracy: 95.31	Elapsed: 150.4 min
+[19:56:11] Train (epoch 42/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.204889	Accuracy: 88.69	Elapsed: 150.6 min
+Confusion matrix :
+[[4420164  136880  165941   64123   17244      13]
+ [ 161082 5215116   35851    8958    1940       0]
+ [ 181348   70604 2206513  443980     265       0]
+ [  45116    6933  281051 4059524     136       0]
+ [  29225    6212     214     909  112080      37]
+ [     74    1163    4979       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.59
+roads: 0.9200
+buildings: 0.9617
+low veg.: 0.7602
+trees: 0.9241
+cars: 0.7538
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9169
+buildings: 0.9604
+low veg.: 0.7884
+trees: 0.9051
+cars: 0.7996
+clutter: 0.0000
+mean F1Score: 0.8741
+---
+Kappa: 0.8731
+[0.84657848 0.92388966 0.65074559 0.82666406 0.66610405 0.        ]
+mean MIoU: 0.7828
+---
+Validation @ epoch 42 iter 41500: mIoU 0.7828 (62.0 s)  (best 0.8055)
+[19:57:23] Train (epoch 42/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.155647	Accuracy: 94.57	Elapsed: 151.8 min
+[19:57:32] Train (epoch 42/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.141502	Accuracy: 100.00	Elapsed: 151.9 min
+[19:57:42] Train (epoch 42/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.178175	Accuracy: 93.57	Elapsed: 152.1 min
+[19:57:51] Train (epoch 42/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.150445	Accuracy: 91.68	Elapsed: 152.2 min
+[19:58:01] Train (epoch 42/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.186957	Accuracy: 94.98	Elapsed: 152.4 min
+Confusion matrix :
+[[4431999  126736  164266   64613   16732      19]
+ [ 177131 5198717   36216    9034    1849       0]
+ [ 185548   67675 2211686  437535     266       0]
+ [  44481    6832  284500 4056828     119       0]
+ [  30002    6094     237     944  111362      38]
+ [     72    1017    5127       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.57
+roads: 0.9225
+buildings: 0.9587
+low veg.: 0.7619
+trees: 0.9235
+cars: 0.7490
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9163
+buildings: 0.9601
+low veg.: 0.7892
+trees: 0.9054
+cars: 0.7983
+clutter: 0.0000
+mean F1Score: 0.8738
+---
+Kappa: 0.8729
+[0.84554332 0.92318223 0.65182714 0.82709935 0.66428064 0.        ]
+mean MIoU: 0.7824
+---
+Validation @ epoch 42 iter 42000: mIoU 0.7824 (62.0 s)  (best 0.8055)
+[19:59:12] Train (epoch 43/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.144156	Accuracy: 94.02	Elapsed: 153.6 min
+[19:59:22] Train (epoch 43/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.158906	Accuracy: 93.35	Elapsed: 153.8 min
+[19:59:31] Train (epoch 43/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.143157	Accuracy: 95.42	Elapsed: 153.9 min
+[19:59:41] Train (epoch 43/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.159338	Accuracy: 89.46	Elapsed: 154.1 min
+[19:59:50] Train (epoch 43/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.159721	Accuracy: 94.06	Elapsed: 154.2 min
+Confusion matrix :
+[[4435453  127468  164200   58754   18463      27]
+ [ 169256 5207017   36134    8378    2153       9]
+ [ 189139   68545 2224257  420486     283       0]
+ [  48192    6829  297782 4039823     134       0]
+ [  28103    5858     213     874  113587      42]
+ [     83    1129    5004       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.62
+roads: 0.9232
+buildings: 0.9602
+low veg.: 0.7663
+trees: 0.9197
+cars: 0.7640
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9169
+buildings: 0.9607
+low veg.: 0.7901
+trees: 0.9057
+cars: 0.8019
+clutter: 0.0000
+mean F1Score: 0.8751
+---
+Kappa: 0.8736
+[0.84659977 0.924414   0.65303257 0.82762025 0.66930057 0.        ]
+mean MIoU: 0.7842
+---
+Validation @ epoch 43 iter 42500: mIoU 0.7842 (62.0 s)  (best 0.8055)
+[20:01:02] Train (epoch 43/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.119576	Accuracy: 94.97	Elapsed: 155.4 min
+[20:01:11] Train (epoch 43/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.139583	Accuracy: 92.21	Elapsed: 155.6 min
+[20:01:21] Train (epoch 43/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.139297	Accuracy: 92.22	Elapsed: 155.7 min
+[20:01:30] Train (epoch 43/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.162111	Accuracy: 93.44	Elapsed: 155.9 min
+[20:01:40] Train (epoch 43/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.123919	Accuracy: 95.99	Elapsed: 156.1 min
+Confusion matrix :
+[[4442337  124329  161957   57587   18155       0]
+ [ 173025 5203576   36186    8354    1806       0]
+ [ 194070   66744 2226748  414844     304       0]
+ [  49088    6573  299506 4037421     172       0]
+ [  28286    5998     239     816  113338       0]
+ [     75    1091    5050       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.64
+roads: 0.9246
+buildings: 0.9595
+low veg.: 0.7671
+trees: 0.9191
+cars: 0.7623
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9168
+buildings: 0.9608
+low veg.: 0.7907
+trees: 0.9061
+cars: 0.8025
+clutter: 0.0000
+mean F1Score: 0.8754
+---
+Kappa: 0.8739
+[0.84633531 0.92463931 0.65383974 0.82829749 0.67018697 0.        ]
+mean MIoU: 0.7847
+---
+Validation @ epoch 43 iter 43000: mIoU 0.7847 (62.0 s)  (best 0.8055)
+[20:02:51] Train (epoch 44/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.146203	Accuracy: 95.67	Elapsed: 157.2 min
+[20:03:01] Train (epoch 44/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.145005	Accuracy: 87.80	Elapsed: 157.4 min
+[20:03:10] Train (epoch 44/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.144822	Accuracy: 90.32	Elapsed: 157.6 min
+[20:03:20] Train (epoch 44/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.145239	Accuracy: 93.55	Elapsed: 157.7 min
+[20:03:29] Train (epoch 44/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.166425	Accuracy: 89.71	Elapsed: 157.9 min
+Confusion matrix :
+[[4442063  122705  163083   59953   16561       0]
+ [ 176676 5199484   36422    8622    1743       0]
+ [ 188827   66914 2222630  424062     277       0]
+ [  48676    6771  289210 4047969     134       0]
+ [  30598    6050     240     863  110912      14]
+ [     46     500    5670       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.64
+roads: 0.9246
+buildings: 0.9588
+low veg.: 0.7657
+trees: 0.9215
+cars: 0.7460
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9167
+buildings: 0.9606
+low veg.: 0.7910
+trees: 0.9062
+cars: 0.7971
+clutter: 0.0000
+mean F1Score: 0.8743
+---
+Kappa: 0.8739
+[0.84623812 0.92420697 0.6542275  0.82843913 0.66258842 0.        ]
+mean MIoU: 0.7831
+---
+Validation @ epoch 44 iter 43500: mIoU 0.7831 (62.1 s)  (best 0.8055)
+[20:04:41] Train (epoch 44/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.129453	Accuracy: 97.47	Elapsed: 159.1 min
+[20:04:50] Train (epoch 44/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.156370	Accuracy: 87.89	Elapsed: 159.2 min
+[20:05:00] Train (epoch 44/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.144458	Accuracy: 94.60	Elapsed: 159.4 min
+[20:05:09] Train (epoch 44/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.185739	Accuracy: 95.23	Elapsed: 159.5 min
+[20:05:19] Train (epoch 44/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.164465	Accuracy: 97.33	Elapsed: 159.7 min
+Confusion matrix :
+[[4436951  120238  167557   61302   18313       4]
+ [ 180519 5193893   37820    8707    2008       0]
+ [ 186321   64135 2225433  426492     329       0]
+ [  46596    6571  291193 4048269     131       0]
+ [  28088    5979     237     853  113502      18]
+ [     55     999    5162       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.61
+roads: 0.9235
+buildings: 0.9578
+low veg.: 0.7667
+trees: 0.9216
+cars: 0.7634
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9165
+buildings: 0.9605
+low veg.: 0.7905
+trees: 0.9058
+cars: 0.8022
+clutter: 0.0000
+mean F1Score: 0.8751
+---
+Kappa: 0.8735
+[0.84578695 0.92403737 0.65363959 0.82784757 0.66979429 0.        ]
+mean MIoU: 0.7842
+---
+Validation @ epoch 44 iter 44000: mIoU 0.7842 (62.0 s)  (best 0.8055)
+[20:06:30] Train (epoch 45/50) [0/1000 (0%)]	Lr: 0.000100	Loss: 0.144936	Accuracy: 91.17	Elapsed: 160.9 min
+[20:06:40] Train (epoch 45/50) [100/1000 (10%)]	Lr: 0.000100	Loss: 0.125447	Accuracy: 98.56	Elapsed: 161.1 min
+[20:06:49] Train (epoch 45/50) [200/1000 (20%)]	Lr: 0.000100	Loss: 0.156190	Accuracy: 88.67	Elapsed: 161.2 min
+[20:06:59] Train (epoch 45/50) [300/1000 (30%)]	Lr: 0.000100	Loss: 0.158326	Accuracy: 96.72	Elapsed: 161.4 min
+[20:07:09] Train (epoch 45/50) [400/1000 (40%)]	Lr: 0.000100	Loss: 0.150766	Accuracy: 92.39	Elapsed: 161.5 min
+Confusion matrix :
+[[4430655  134304  158483   63027   17882      14]
+ [ 157208 5221058   33747    9245    1689       0]
+ [ 189589   70107 2222380  420324     310       0]
+ [  44918    6943  296585 4044175     139       0]
+ [  28368    6557     250     893  112561      48]
+ [     75    1189    4952       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.68
+roads: 0.9222
+buildings: 0.9628
+low veg.: 0.7656
+trees: 0.9206
+cars: 0.7571
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9178
+buildings: 0.9612
+low veg.: 0.7910
+trees: 0.9057
+cars: 0.8004
+clutter: 0.0000
+mean F1Score: 0.8752
+---
+Kappa: 0.8744
+[0.84804967 0.92538364 0.65427101 0.82766453 0.66723771 0.        ]
+mean MIoU: 0.7845
+---
+Validation @ epoch 45 iter 44500: mIoU 0.7845 (62.1 s)  (best 0.8055)
+[20:08:20] Train (epoch 45/50) [500/1000 (50%)]	Lr: 0.000100	Loss: 0.144228	Accuracy: 94.11	Elapsed: 162.7 min
+[20:08:30] Train (epoch 45/50) [600/1000 (60%)]	Lr: 0.000100	Loss: 0.157344	Accuracy: 97.62	Elapsed: 162.9 min
+[20:08:39] Train (epoch 45/50) [700/1000 (70%)]	Lr: 0.000100	Loss: 0.156983	Accuracy: 92.28	Elapsed: 163.0 min
+[20:08:49] Train (epoch 45/50) [800/1000 (80%)]	Lr: 0.000100	Loss: 0.149202	Accuracy: 91.38	Elapsed: 163.2 min
+[20:08:58] Train (epoch 45/50) [900/1000 (90%)]	Lr: 0.000100	Loss: 0.144385	Accuracy: 100.00	Elapsed: 163.4 min
+Confusion matrix :
+[[4422721  134779  166054   63260   17495      56]
+ [ 156668 5219223   36197    9220    1639       0]
+ [ 183707   69030 2207734  441942     297       0]
+ [  44971    6819  284279 4056557     134       0]
+ [  28499    6732     253     917  112047     229]
+ [     84     986    5146       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.61
+roads: 0.9206
+buildings: 0.9624
+low veg.: 0.7606
+trees: 0.9235
+cars: 0.7536
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9175
+buildings: 0.9611
+low veg.: 0.7881
+trees: 0.9050
+cars: 0.7995
+clutter: 0.0000
+mean F1Score: 0.8743
+---
+Kappa: 0.8735
+[0.84754155 0.92518205 0.65035899 0.82650268 0.66598709 0.        ]
+mean MIoU: 0.7831
+---
+Validation @ epoch 45 iter 45000: mIoU 0.7831 (61.9 s)  (best 0.8055)
+[20:10:10] Train (epoch 46/50) [0/1000 (0%)]	Lr: 0.000010	Loss: 0.155645	Accuracy: 98.15	Elapsed: 164.6 min
+[20:10:19] Train (epoch 46/50) [100/1000 (10%)]	Lr: 0.000010	Loss: 0.139800	Accuracy: 93.79	Elapsed: 164.7 min
+[20:10:29] Train (epoch 46/50) [200/1000 (20%)]	Lr: 0.000010	Loss: 0.177523	Accuracy: 93.50	Elapsed: 164.9 min
+[20:10:38] Train (epoch 46/50) [300/1000 (30%)]	Lr: 0.000010	Loss: 0.155753	Accuracy: 93.81	Elapsed: 165.0 min
+[20:10:48] Train (epoch 46/50) [400/1000 (40%)]	Lr: 0.000010	Loss: 0.154445	Accuracy: 94.35	Elapsed: 165.2 min
+Confusion matrix :
+[[4436397  123846  164572   61935   17615       0]
+ [ 169483 5204586   38085    9080    1713       0]
+ [ 186956   65278 2209290  440860     326       0]
+ [  47009    6364  281841 4057387     159       0]
+ [  29113    6098     245     858  112314      49]
+ [     58     626    5532       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.62
+roads: 0.9234
+buildings: 0.9597
+low veg.: 0.7611
+trees: 0.9237
+cars: 0.7554
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9172
+buildings: 0.9612
+low veg.: 0.7887
+trees: 0.9054
+cars: 0.7999
+clutter: 0.0000
+mean F1Score: 0.8745
+---
+Kappa: 0.8736
+[0.84712823 0.92523358 0.65113462 0.82711096 0.66659149 0.        ]
+mean MIoU: 0.7834
+---
+Validation @ epoch 46 iter 45500: mIoU 0.7834 (62.0 s)  (best 0.8055)
+[20:11:59] Train (epoch 46/50) [500/1000 (50%)]	Lr: 0.000010	Loss: 0.162246	Accuracy: 99.42	Elapsed: 166.4 min
+[20:12:09] Train (epoch 46/50) [600/1000 (60%)]	Lr: 0.000010	Loss: 0.138147	Accuracy: 92.81	Elapsed: 166.5 min
+[20:12:18] Train (epoch 46/50) [700/1000 (70%)]	Lr: 0.000010	Loss: 0.184948	Accuracy: 94.96	Elapsed: 166.7 min
+[20:12:28] Train (epoch 46/50) [800/1000 (80%)]	Lr: 0.000010	Loss: 0.163417	Accuracy: 93.55	Elapsed: 166.9 min
+[20:12:37] Train (epoch 46/50) [900/1000 (90%)]	Lr: 0.000010	Loss: 0.157267	Accuracy: 93.61	Elapsed: 167.0 min
+Confusion matrix :
+[[4439832  131411  154352   61186   17554      30]
+ [ 166286 5211401   34832    8713    1715       0]
+ [ 198115   68245 2202633  433403     314       0]
+ [  49350    6778  282145 4054341     146       0]
+ [  29014    6265     203     864  112247      84]
+ [     93     993    5130       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.63
+roads: 0.9241
+buildings: 0.9610
+low veg.: 0.7588
+trees: 0.9230
+cars: 0.7550
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9167
+buildings: 0.9608
+low veg.: 0.7892
+trees: 0.9059
+cars: 0.7999
+clutter: 0.0000
+mean F1Score: 0.8745
+---
+Kappa: 0.8736
+[0.84612985 0.92455823 0.65178767 0.82793593 0.66652613 0.        ]
+mean MIoU: 0.7834
+---
+Validation @ epoch 46 iter 46000: mIoU 0.7834 (62.0 s)  (best 0.8055)
+[20:13:49] Train (epoch 47/50) [0/1000 (0%)]	Lr: 0.000010	Loss: 0.142313	Accuracy: 97.16	Elapsed: 168.2 min
+[20:13:58] Train (epoch 47/50) [100/1000 (10%)]	Lr: 0.000010	Loss: 0.132129	Accuracy: 97.07	Elapsed: 168.4 min
+[20:14:08] Train (epoch 47/50) [200/1000 (20%)]	Lr: 0.000010	Loss: 0.149422	Accuracy: 91.75	Elapsed: 168.5 min
+[20:14:17] Train (epoch 47/50) [300/1000 (30%)]	Lr: 0.000010	Loss: 0.156236	Accuracy: 97.53	Elapsed: 168.7 min
+[20:14:27] Train (epoch 47/50) [400/1000 (40%)]	Lr: 0.000010	Loss: 0.135880	Accuracy: 92.42	Elapsed: 168.8 min
+Confusion matrix :
+[[4437906  126773  159691   62401   17588       6]
+ [ 169340 5207018   35696    9118    1775       0]
+ [ 189539   68335 2214889  429624     323       0]
+ [  47175    6841  290760 4047850     134       0]
+ [  28746    6204     223     866  112589      49]
+ [     78     940    5198       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.62
+roads: 0.9237
+buildings: 0.9602
+low veg.: 0.7630
+trees: 0.9215
+cars: 0.7573
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9172
+buildings: 0.9608
+low veg.: 0.7897
+trees: 0.9053
+cars: 0.8011
+clutter: 0.0000
+mean F1Score: 0.8748
+---
+Kappa: 0.8736
+[0.847051   0.92453498 0.65253612 0.82697467 0.66819587 0.        ]
+mean MIoU: 0.7839
+---
+Validation @ epoch 47 iter 46500: mIoU 0.7839 (62.0 s)  (best 0.8055)
+[20:15:38] Train (epoch 47/50) [500/1000 (50%)]	Lr: 0.000010	Loss: 0.138132	Accuracy: 95.25	Elapsed: 170.0 min
+[20:15:48] Train (epoch 47/50) [600/1000 (60%)]	Lr: 0.000010	Loss: 0.158564	Accuracy: 94.26	Elapsed: 170.2 min
+[20:15:57] Train (epoch 47/50) [700/1000 (70%)]	Lr: 0.000010	Loss: 0.162390	Accuracy: 94.76	Elapsed: 170.3 min
+[20:16:07] Train (epoch 47/50) [800/1000 (80%)]	Lr: 0.000010	Loss: 0.157331	Accuracy: 97.09	Elapsed: 170.5 min
+[20:16:16] Train (epoch 47/50) [900/1000 (90%)]	Lr: 0.000010	Loss: 0.125044	Accuracy: 94.42	Elapsed: 170.7 min
+Confusion matrix :
+[[4438151  127918  158247   62917   17132       0]
+ [ 165548 5210761   36120    9021    1497       0]
+ [ 192511   66958 2205008  437949     284       0]
+ [  47464    6597  278476 4060082     141       0]
+ [  29520    6524     272     854  111507       0]
+ [     65    1051    5100       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.65
+roads: 0.9238
+buildings: 0.9609
+low veg.: 0.7596
+trees: 0.9243
+cars: 0.7500
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9172
+buildings: 0.9612
+low veg.: 0.7895
+trees: 0.9059
+cars: 0.7987
+clutter: 0.0000
+mean F1Score: 0.8745
+---
+Kappa: 0.8740
+[0.84706057 0.92520696 0.65219075 0.82799657 0.66479661 0.        ]
+mean MIoU: 0.7835
+---
+Validation @ epoch 47 iter 47000: mIoU 0.7835 (62.1 s)  (best 0.8055)
+[20:17:28] Train (epoch 48/50) [0/1000 (0%)]	Lr: 0.000010	Loss: 0.149303	Accuracy: 94.26	Elapsed: 171.9 min
+[20:17:38] Train (epoch 48/50) [100/1000 (10%)]	Lr: 0.000010	Loss: 0.145675	Accuracy: 93.43	Elapsed: 172.0 min
+[20:17:47] Train (epoch 48/50) [200/1000 (20%)]	Lr: 0.000010	Loss: 0.160843	Accuracy: 94.31	Elapsed: 172.2 min
+[20:17:57] Train (epoch 48/50) [300/1000 (30%)]	Lr: 0.000010	Loss: 0.155599	Accuracy: 91.05	Elapsed: 172.3 min
+[20:18:06] Train (epoch 48/50) [400/1000 (40%)]	Lr: 0.000010	Loss: 0.169303	Accuracy: 95.41	Elapsed: 172.5 min
+Confusion matrix :
+[[4447100  126897  153112   60121   17135       0]
+ [ 171179 5206863   34654    8532    1719       0]
+ [ 202627   68034 2206901  424842     306       0]
+ [  50553    6832  286434 4048797     144       0]
+ [  29653    6267     229     803  111724       1]
+ [     86    1063    5067       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.63
+roads: 0.9256
+buildings: 0.9602
+low veg.: 0.7603
+trees: 0.9217
+cars: 0.7515
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9164
+buildings: 0.9608
+low veg.: 0.7897
+trees: 0.9062
+cars: 0.7989
+clutter: 0.0000
+mean F1Score: 0.8744
+---
+Kappa: 0.8737
+[0.84570339 0.92450746 0.65250343 0.82847329 0.66509903 0.        ]
+mean MIoU: 0.7833
+---
+Validation @ epoch 48 iter 47500: mIoU 0.7833 (62.0 s)  (best 0.8055)
+[20:19:17] Train (epoch 48/50) [500/1000 (50%)]	Lr: 0.000010	Loss: 0.146998	Accuracy: 97.94	Elapsed: 173.7 min
+[20:19:27] Train (epoch 48/50) [600/1000 (60%)]	Lr: 0.000010	Loss: 0.165732	Accuracy: 94.82	Elapsed: 173.8 min
+[20:19:36] Train (epoch 48/50) [700/1000 (70%)]	Lr: 0.000010	Loss: 0.142901	Accuracy: 93.82	Elapsed: 174.0 min
+[20:19:46] Train (epoch 48/50) [800/1000 (80%)]	Lr: 0.000010	Loss: 0.133453	Accuracy: 91.69	Elapsed: 174.2 min
+[20:19:56] Train (epoch 48/50) [900/1000 (90%)]	Lr: 0.000010	Loss: 0.142768	Accuracy: 94.06	Elapsed: 174.3 min
+Confusion matrix :
+[[4427912  129837  171916   56997   17667      36]
+ [ 167523 5208208   37622    7839    1755       0]
+ [ 185576   68365 2245086  403403     280       0]
+ [  46096    7004  312673 4026826     161       0]
+ [  28837    6186     254     808  112476     116]
+ [     53     775    5388       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.63
+roads: 0.9216
+buildings: 0.9604
+low veg.: 0.7734
+trees: 0.9167
+cars: 0.7565
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9167
+buildings: 0.9606
+low veg.: 0.7911
+trees: 0.9061
+cars: 0.8005
+clutter: 0.0000
+mean F1Score: 0.8750
+---
+Kappa: 0.8737
+[0.84624067 0.92424182 0.6544366  0.82825707 0.66735493 0.        ]
+mean MIoU: 0.7841
+---
+Validation @ epoch 48 iter 48000: mIoU 0.7841 (62.0 s)  (best 0.8055)
+[20:21:07] Train (epoch 49/50) [0/1000 (0%)]	Lr: 0.000010	Loss: 0.156668	Accuracy: 89.96	Elapsed: 175.5 min
+[20:21:17] Train (epoch 49/50) [100/1000 (10%)]	Lr: 0.000010	Loss: 0.136339	Accuracy: 93.20	Elapsed: 175.7 min
+[20:21:26] Train (epoch 49/50) [200/1000 (20%)]	Lr: 0.000010	Loss: 0.168612	Accuracy: 92.08	Elapsed: 175.8 min
+[20:21:36] Train (epoch 49/50) [300/1000 (30%)]	Lr: 0.000010	Loss: 0.155738	Accuracy: 94.20	Elapsed: 176.0 min
+[20:21:45] Train (epoch 49/50) [400/1000 (40%)]	Lr: 0.000010	Loss: 0.158828	Accuracy: 94.89	Elapsed: 176.1 min
+Confusion matrix :
+[[4431359  130524  165551   60061   16870       0]
+ [ 163598 5213719   35417    8577    1636       0]
+ [ 184759   71756 2228573  417339     283       0]
+ [  47029    7303  299249 4039026     153       0]
+ [  29930    6288     255     850  111323      31]
+ [     62     717    5437       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.65
+roads: 0.9224
+buildings: 0.9614
+low veg.: 0.7678
+trees: 0.9195
+cars: 0.7488
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9174
+buildings: 0.9608
+low veg.: 0.7907
+trees: 0.9058
+cars: 0.7982
+clutter: 0.0000
+mean F1Score: 0.8745
+---
+Kappa: 0.8739
+[0.84733781 0.92449448 0.65380525 0.82773931 0.66414309 0.        ]
+mean MIoU: 0.7835
+---
+Validation @ epoch 49 iter 48500: mIoU 0.7835 (61.9 s)  (best 0.8055)
+[20:22:57] Train (epoch 49/50) [500/1000 (50%)]	Lr: 0.000010	Loss: 0.150785	Accuracy: 98.26	Elapsed: 177.3 min
+[20:23:06] Train (epoch 49/50) [600/1000 (60%)]	Lr: 0.000010	Loss: 0.171909	Accuracy: 92.52	Elapsed: 177.5 min
+[20:23:16] Train (epoch 49/50) [700/1000 (70%)]	Lr: 0.000010	Loss: 0.172400	Accuracy: 93.62	Elapsed: 177.7 min
+[20:23:25] Train (epoch 49/50) [800/1000 (80%)]	Lr: 0.000010	Loss: 0.161828	Accuracy: 95.03	Elapsed: 177.8 min
+[20:23:35] Train (epoch 49/50) [900/1000 (90%)]	Lr: 0.000010	Loss: 0.121838	Accuracy: 98.56	Elapsed: 178.0 min
+Confusion matrix :
+[[4433024  130582  162181   61897   16681       0]
+ [ 165720 5211602   35221    8831    1573       0]
+ [ 190475   69508 2213540  428920     267       0]
+ [  46874    6926  288547 4050289     124       0]
+ [  29689    6473     280     897  111327      11]
+ [     78    1008    5130       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.62
+roads: 0.9227
+buildings: 0.9610
+low veg.: 0.7626
+trees: 0.9220
+cars: 0.7488
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9168
+buildings: 0.9607
+low veg.: 0.7895
+trees: 0.9057
+cars: 0.7990
+clutter: 0.0000
+mean F1Score: 0.8744
+---
+Kappa: 0.8736
+[0.84644909 0.92446187 0.65217884 0.82772053 0.66534586 0.        ]
+mean MIoU: 0.7832
+---
+Validation @ epoch 49 iter 49000: mIoU 0.7832 (62.0 s)  (best 0.8055)
+[20:24:46] Train (epoch 50/50) [0/1000 (0%)]	Lr: 0.000010	Loss: 0.172317	Accuracy: 100.00	Elapsed: 179.2 min
+[20:24:56] Train (epoch 50/50) [100/1000 (10%)]	Lr: 0.000010	Loss: 0.197250	Accuracy: 93.32	Elapsed: 179.3 min
+[20:25:05] Train (epoch 50/50) [200/1000 (20%)]	Lr: 0.000010	Loss: 0.187973	Accuracy: 90.76	Elapsed: 179.5 min
+[20:25:15] Train (epoch 50/50) [300/1000 (30%)]	Lr: 0.000010	Loss: 0.164121	Accuracy: 92.77	Elapsed: 179.6 min
+[20:25:24] Train (epoch 50/50) [400/1000 (40%)]	Lr: 0.000010	Loss: 0.170451	Accuracy: 88.04	Elapsed: 179.8 min
+Confusion matrix :
+[[4423237  134104  168694   60636   17694       0]
+ [ 159194 5217390   36406    8285    1672       0]
+ [ 184216   69323 2236083  412806     282       0]
+ [  44621    7005  300138 4040844     152       0]
+ [  28377    6568     262     846  112617       7]
+ [     62     969    5185       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.68
+roads: 0.9207
+buildings: 0.9621
+low veg.: 0.7703
+trees: 0.9199
+cars: 0.7575
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9173
+buildings: 0.9610
+low veg.: 0.7916
+trees: 0.9064
+cars: 0.8013
+clutter: 0.0000
+mean F1Score: 0.8755
+---
+Kappa: 0.8744
+[0.84722789 0.92491893 0.65509061 0.82883446 0.66844139 0.        ]
+mean MIoU: 0.7849
+---
+Validation @ epoch 50 iter 49500: mIoU 0.7849 (62.0 s)  (best 0.8055)
+[20:26:36] Train (epoch 50/50) [500/1000 (50%)]	Lr: 0.000010	Loss: 0.103768	Accuracy: 96.55	Elapsed: 181.0 min
+[20:26:45] Train (epoch 50/50) [600/1000 (60%)]	Lr: 0.000010	Loss: 0.171584	Accuracy: 92.09	Elapsed: 181.1 min
+[20:26:55] Train (epoch 50/50) [700/1000 (70%)]	Lr: 0.000010	Loss: 0.132881	Accuracy: 96.32	Elapsed: 181.3 min
+[20:27:04] Train (epoch 50/50) [800/1000 (80%)]	Lr: 0.000010	Loss: 0.153132	Accuracy: 94.35	Elapsed: 181.5 min
+[20:27:14] Train (epoch 50/50) [900/1000 (90%)]	Lr: 0.000010	Loss: 0.169615	Accuracy: 93.50	Elapsed: 181.6 min
+Confusion matrix :
+[[4434899  127369  165909   59699   16489       0]
+ [ 166651 5209323   36992    8461    1520       0]
+ [ 189425   66476 2232207  414359     243       0]
+ [  47220    6702  299427 4039272     139       0]
+ [  30043    6448     251     828  111040      67]
+ [     68     752    5396       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.66
+roads: 0.9231
+buildings: 0.9606
+low veg.: 0.7690
+trees: 0.9195
+cars: 0.7469
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9170
+buildings: 0.9611
+low veg.: 0.7912
+trees: 0.9061
+cars: 0.7985
+clutter: 0.0000
+mean F1Score: 0.8748
+---
+Kappa: 0.8741
+[0.84671479 0.92516535 0.65447469 0.82838051 0.66463955 0.        ]
+mean MIoU: 0.7839
+---
+Validation @ epoch 50 iter 50000: mIoU 0.7839 (62.2 s)  (best 0.8055)
+Saved final weights to results\ViT_Vaihingen_final.pth
+=== Final evaluation (last epoch weights, stride 32) ===
+Confusion matrix :
+[[4434899  127369  165909   59699   16489       0]
+ [ 166651 5209323   36992    8461    1520       0]
+ [ 189425   66476 2232207  414359     243       0]
+ [  47220    6702  299427 4039272     139       0]
+ [  30043    6448     251     828  111040      67]
+ [     68     752    5396       0       0       0]]
+17677675 pixels processed
+Total accuracy : 90.66
+roads: 0.9231
+buildings: 0.9606
+low veg.: 0.7690
+trees: 0.9195
+cars: 0.7469
+clutter: 0.0000
+---
+F1Score :
+roads: 0.9170
+buildings: 0.9611
+low veg.: 0.7912
+trees: 0.9061
+cars: 0.7985
+clutter: 0.0000
+mean F1Score: 0.8748
+---
+Kappa: 0.8741
+[0.84671479 0.92516535 0.65447469 0.82838051 0.66463955 0.        ]
+mean MIoU: 0.7839
+---
+=== Best checkpoint: mIoU 0.8055 at epoch 9 iter 8500 ===
+Done. Summary appended to results/summary.csv

@@ -1,0 +1,4 @@
+time,model,dataset,params_M,epochs,amp,best_mIoU,best_epoch,best_iter,final_mIoU,final_mF1,final_OA,final_Kappa,train_minutes,best_weights,final_weights,log
+20261118_152047,UNetformer,Vaihingen,11.69,50,False,0.8212,31,31000,0.8203,0.8986,91.33,0.8832,41.0,results\UNetformer_Vaihingen_best.pth,results\UNetformer_Vaihingen_final.pth,log\UNetformer_Vaihingen_Train_20261118_152047.log
+20261118_160206,ResNet,Vaihingen,32.52,50,False,0.8209,45,44500,0.818,0.8975,90.82,0.8765,83.0,results\ResNet_Vaihingen_best.pth,results\ResNet_Vaihingen_final.pth,log\ResNet_Vaihingen_Train_20261118_160206.log
+20261118_172536,ViT,Vaihingen,93.77,50,False,0.8055,9,8500,0.7839,0.8748,90.66,0.8741,182.8,results\ViT_Vaihingen_best.pth,results\ViT_Vaihingen_final.pth,log\ViT_Vaihingen_Train_20261118_172536.log
