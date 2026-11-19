@@ -54,7 +54,7 @@ Tables 1 and 2 report the **best epoch** (the validation with the highest mIoU).
 ### Table 4: Pretrained encoders and pretraining data
 
 | Model | Encoder | timm weights | Pretraining data |
-|---|---|---|---|---|
+|---|---|---|---|
 | UNetFormer | ResNet-18 | `resnet18.fb_swsl_ig1b_ft_in1k` | Semi-weakly supervised on 1B Instagram images → fine-tuned on ImageNet-1k |
 | ResNet | ResNet-50 | `resnet50.a1_in1k` | ImageNet-1k |
 | ViT | ViT-B/16 | `vit_base_patch16_224.augreg2_in21k_ft_in1k` | ImageNet-21k → fine-tuned on ImageNet-1k (position embeddings interpolated to 256×256) |
