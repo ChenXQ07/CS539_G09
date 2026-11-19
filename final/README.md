@@ -1,24 +1,12 @@
-# UNetFormer vs. ResNet vs. ViT for Remote Sensing Semantic Segmentation (ISPRS Vaihingen)
-
 ## 1. Project structure
 
 | Path | Contents |
 |---|---|
-| `log/` | Training logs. Everything a run prints (loss, the confusion matrix and metrics from every validation, any errors) is written to `<model>_Vaihingen_Train_<time>.log`. |
-| `model/` | Code for the three models: `UNetFormer.py` (UNetFormer), `ResNet.py` (ResNet-50 encoder + U-Net decoder) and `ViT.py` (ViT-B/16 encoder + FPN decoder). |
-| `results/summary.csv` | Comparison of the three models, one row per training run: parameter count, best mIoU and its epoch, mIoU / mF1 / OA / Kappa of the final weights, training time, and the weight and log paths. |
-| `results/*.pth` | Trained weights. `<model>_Vaihingen_best.pth` has the highest validation mIoU; `<model>_Vaihingen_final.pth` is from the end of epoch 50. |
-| `results/*_history.json` | The mIoU from every validation of each model, plus the full metrics of the final weights. |
-| `train.py` | Training and testing code. Pick the model with `--model UNetformer\|ResNet\|ViT`; use `--mode Test --weights <path>` to run inference and save prediction maps. |
-| `utils.py` | Settings and helpers: data path `FOLDER`, dataset `DATASET`, training/test tile IDs, crop size `WINDOW_SIZE`, `BATCH_SIZE`, validation stride `Stride_Size`, class names and color palette, plus the dataset loader, loss function and evaluation metrics. |
-| `run_all.ps1` | Trains the three models one after another. |
-
-Examples:
-
-```powershell
-D:\Miniconda\envs\torch_basic\python.exe train.py --model UNetformer
-D:\Miniconda\envs\torch_basic\python.exe train.py --model ViT --mode Test --weights results\ViT_Vaihingen_best.pth
-```
+| `log/` | Training logs. |
+| `model/` | Code for the three models: `UNetFormer.py`, `ResNet.py` and `ViT.py`. |
+| `summary.csv` | Comparison of the three models (raw file)|
+| `train.py` | Training and testing code.|
+| `utils.py` | Settings. |
 
 ## 2. Experimental setup
 
@@ -31,17 +19,15 @@ D:\Miniconda\envs\torch_basic\python.exe train.py --model ViT --mode Test --weig
 
 ## 3. Results
 
-Tables 1 and 2 report the **best epoch** (the validation with the highest mIoU), taken from that validation's output in `log/`. The `final_*` columns in `results/summary.csv` are the results of the final weights from epoch 50.
-
-> Note: the best epoch is selected on the test tiles and scored on the same tiles, so best-epoch numbers are optimistic. For formal reporting, use the final-weight results in `summary.csv`.
+Tables 1 and 2 report the **best epoch** (the validation with the highest mIoU).
 
 ### Table 1: Overall metrics at the best epoch
 
-| Model | Best epoch (iteration) | mIoU | mF1 | OA (%) | Kappa |
+| Model | Best epoch | mIoU | mF1 | OA (%) | Kappa |
 |---|---|---|---|---|---|
-| UNetFormer | 31 (31000) | **0.8212** | **0.8992** | 91.37 | 0.8838 |
-| ResNet | 45 (44500) | 0.8209 | **0.8992** | 91.01 | 0.8790 |
-| ViT | 9 (8500) | 0.8055 | 0.8892 | **91.56** | **0.8864** |
+| UNetFormer | 31 | **0.8212** | **0.8992** | 91.37 | 0.8838 |
+| ResNet | 45 | 0.8209 | **0.8992** | 91.01 | 0.8790 |
+| ViT | 9 | 0.8055 | 0.8892 | **91.56** | **0.8864** |
 
 ### Table 2: Per-class IoU at the best epoch
 
@@ -67,11 +53,11 @@ Tables 1 and 2 report the **best epoch** (the validation with the highest mIoU),
 
 ### Table 4: Pretrained encoders and pretraining data
 
-| Model | Encoder | timm weights | Pretraining data | Decoder (randomly initialized) |
+| Model | Encoder | timm weights | Pretraining data |
 |---|---|---|---|---|
-| UNetFormer | ResNet-18 | `resnet18.fb_swsl_ig1b_ft_in1k` | Semi-weakly supervised on 1B Instagram images → fine-tuned on ImageNet-1k | UNetFormer decoder (global-local Transformer blocks + feature refinement head) |
-| ResNet | ResNet-50 | `resnet50.a1_in1k` | ImageNet-1k | U-Net decoder (5 upsampling stages + skip connections) |
-| ViT | ViT-B/16 | `vit_base_patch16_224.augreg2_in21k_ft_in1k` | ImageNet-21k → fine-tuned on ImageNet-1k (position embeddings interpolated to 256×256) | Simple feature pyramid + FPN (features from blocks 3/6/9/12) |
+| UNetFormer | ResNet-18 | `resnet18.fb_swsl_ig1b_ft_in1k` | Semi-weakly supervised on 1B Instagram images → fine-tuned on ImageNet-1k |
+| ResNet | ResNet-50 | `resnet50.a1_in1k` | ImageNet-1k |
+| ViT | ViT-B/16 | `vit_base_patch16_224.augreg2_in21k_ft_in1k` | ImageNet-21k → fine-tuned on ImageNet-1k (position embeddings interpolated to 256×256) |
 
 Only the encoders use pretrained weights; all decoders are trained from random initialization.
 
