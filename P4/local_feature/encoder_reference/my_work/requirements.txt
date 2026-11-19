@@ -1,0 +1,4 @@
+# Tested together with Python 3.12.14 on Windows (CPU).
+torch==2.15.0
+torchvision==0.29.2
+pytest==9.2.0
