@@ -1,0 +1,396 @@
+{
+  "split_id": "vaihingen_full16_v1",
+  "decision_date": "2026-11-20",
+  "status": "fixed_complete_labeled_dataset",
+  "partition_unit": "original_image_tile",
+  "partitions": {
+    "train": [
+      1,
+      3,
+      7,
+      11,
+      13,
+      17,
+      23,
+      26,
+      28,
+      32
+    ],
+    "validation": [
+      34,
+      37
+    ],
+    "test": [
+      5,
+      15,
+      21,
+      30
+    ]
+  },
+  "counts": {
+    "train": 10,
+    "validation": 2,
+    "test": 4
+  },
+  "selection_rationale": "Keep test IDs 5, 15, 21 and 30 from the original project configuration. Reserve 34 and 37 from the remaining 12 labeled tiles for validation. Use the other 10 for training. This is a fixed assignment, not selected using model scores.",
+  "source_checks": "All 16 triples passed dimension, palette and full-versus-eroded consistency checks. Source hashes were rechecked when this split was generated.",
+  "source_audit_sha256": "0f03759ac031859d16860a0c3830e81840f023720ba5101ea3f819cf4057d794",
+  "class_support": {
+    "train": {
+      "full": {
+        "class_pixels": {
+          "0": 14799970,
+          "1": 12810148,
+          "2": 10520768,
+          "3": 11678096,
+          "4": 682390,
+          "5": 518900
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "eroded": {
+        "class_pixels": {
+          "0": 13431865,
+          "1": 11988921,
+          "2": 9336962,
+          "3": 10491700,
+          "4": 460990,
+          "5": 489751
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "validation": {
+      "full": {
+        "class_pixels": {
+          "0": 1711776,
+          "1": 1825957,
+          "2": 2387419,
+          "3": 1558183,
+          "4": 45025,
+          "5": 0
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "eroded": {
+        "class_pixels": {
+          "0": 1530773,
+          "1": 1713117,
+          "2": 2152654,
+          "3": 1373068,
+          "4": 30433,
+          "5": 0
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "test": {
+      "full": {
+        "class_pixels": {
+          "0": 5303603,
+          "1": 5781227,
+          "2": 3364730,
+          "3": 4874159,
+          "4": 218272,
+          "5": 7183
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "eroded": {
+        "class_pixels": {
+          "0": 4804365,
+          "1": 5422947,
+          "2": 2902710,
+          "3": 4392760,
+          "4": 148677,
+          "5": 6216
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    }
+  },
+  "data_contract": {
+    "input_channels": [
+      "near_infrared",
+      "red",
+      "green"
+    ],
+    "image_scaling": "uint8 / 255 -> float32 in [0, 1]",
+    "training_reference": "full_label_path",
+    "eroded_reference": "eroded_label_path",
+    "class_ids": {
+      "0": "impervious_surfaces",
+      "1": "buildings",
+      "2": "low_vegetation",
+      "3": "trees",
+      "4": "cars",
+      "5": "clutter_background"
+    },
+    "planned_ignore_index": 255,
+    "training_crop_size": [
+      256,
+      256
+    ],
+    "planned_augmentation": "Synchronized horizontal and vertical flips on training images and labels only",
+    "validation_test": "Deterministic image/label handling; never update model parameters from these tiles",
+    "optional_height_input": "DSM paths are recorded for future workflow decisions; DSM/SAM products are not enabled as segmentation inputs here"
+  },
+  "rules": [
+    "Keep every crop, augmentation and derived view in its original tile's partition.",
+    "Use the same split for all compared models and all connected neural stages.",
+    "Select settings and checkpoints using training/validation data only; reserve test tiles for final evaluation.",
+    "Keep full and eroded references distinct and state the evaluation mask and class averaging convention.",
+    "Save a new version if a later experiment changes the tile assignment."
+  ],
+  "label_metadata_note": "Valid colors and archive byte agreement verify file consistency, not independent source provenance or pixel-perfect annotation accuracy.",
+  "tile_files": [
+    {
+      "tile_id": 1,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-003/Vaihingen/top/top_mosaic_09cm_area1.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_for_participants/top_mosaic_09cm_area1.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area1_noBoundary.tif",
+      "width": 1919,
+      "height": 2569,
+      "image_sha256": "656e4f358d2298a84b97472168f4b5416fba4162ffc51f4b3fc11a1cdfef0e3d",
+      "full_label_sha256": "9e01a18b2fa8dbba17d30e36d50a264f97409356e5a259a48b9f3225143984d7",
+      "eroded_label_sha256": "85df784dea8752f1753452e9038e6ff460ac3250ccd3c198aa478211da92fd29",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area1.tif"
+    },
+    {
+      "tile_id": 3,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area3.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area3.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area3_noBoundary.tif",
+      "width": 2006,
+      "height": 3007,
+      "image_sha256": "d16872087590dc8ffd5b45c81537f9028a7081c47af50f067137c37b0fb7821e",
+      "full_label_sha256": "c3f2a1454419344efc3429d23b3f1c3dbf6acb0f0aeb8628c9a2c5c5224e0c6a",
+      "eroded_label_sha256": "b60785ad72c62f7c45acb6f553bbd3b9d6fbcf4fde234987ec0944452dc4b274",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-002/Vaihingen/dsm/dsm_09cm_matching_area3.tif"
+    },
+    {
+      "tile_id": 7,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area7.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area7.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area7_noBoundary.tif",
+      "width": 1887,
+      "height": 2557,
+      "image_sha256": "e0e2eda818caf672558d9ebaa68b29ae98b99351f00058be6ed2c623709fe572",
+      "full_label_sha256": "7f6750ace6394b31bff5dcde14781606b5b92ff4eb06d8eeef5be5fc50ab1815",
+      "eroded_label_sha256": "9c437811b51f98ab1f79d40c2c019c52c6bf44791abf69a528e59428e50341d4",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-002/Vaihingen/dsm/dsm_09cm_matching_area7.tif"
+    },
+    {
+      "tile_id": 11,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area11.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area11.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area11_noBoundary.tif",
+      "width": 1893,
+      "height": 2566,
+      "image_sha256": "665f0ac397665ca79da100fd4751685cc5162b3ff92c5a967344dc707d82112c",
+      "full_label_sha256": "5642c05a2b54e89ba3bb81547c3db06c6aebe4334dd4e71ab94df66c0bed0621",
+      "eroded_label_sha256": "2d31f75ec0b0c60c271ed8791c04519a1576eef801cff9d9bc86f20388311bd2",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area11.tif"
+    },
+    {
+      "tile_id": 13,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-003/Vaihingen/top/top_mosaic_09cm_area13.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area13.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area13_noBoundary.tif",
+      "width": 2818,
+      "height": 2558,
+      "image_sha256": "82279beb58038033f3815e5c2d5fc6696bc5a5692207821828f789a0b5a7b8fe",
+      "full_label_sha256": "dc547710470a41a0fcd59c28af21ac5e7efe354f68dcb2eb3998b9c69602056a",
+      "eroded_label_sha256": "03b38612ac85028906fa60a91e03a7345d544165a2a0821e7933eca90d2d0f81",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area13.tif"
+    },
+    {
+      "tile_id": 17,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area17.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area17.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area17_noBoundary.tif",
+      "width": 2336,
+      "height": 1281,
+      "image_sha256": "42eb3ad90338f00a4d255fd68bd112bcefd3a910891fadd78b83bcf511d089bb",
+      "full_label_sha256": "1b28bc6ca9690856d4c389a438cb856f0f1f28732fbb5202049e840f1d956ffa",
+      "eroded_label_sha256": "6f8a56cc5ec58f6d111f6b72040a621e2ecb1aaf1d4f09f9c46575feaba0d280",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area17.tif"
+    },
+    {
+      "tile_id": 23,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area23.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area23.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area23_noBoundary.tif",
+      "width": 1903,
+      "height": 2546,
+      "image_sha256": "05293bf0e3dd2fb3fe823d2a8053a4282a436b95f09eff06c7e3bc841e373359",
+      "full_label_sha256": "88819b6e64b0fc126ddef749b0878ae3bfa14a4d32a6ad89ba3d4d4d3f0ffe9a",
+      "eroded_label_sha256": "a944ee77bb0bf7e035533763c096b1f2be9956eb107aab87648179baf60133fb",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area23.tif"
+    },
+    {
+      "tile_id": 26,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area26.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area26.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area26_noBoundary.tif",
+      "width": 2995,
+      "height": 1783,
+      "image_sha256": "01bd84675f154a6d6b288313d5f792c4ecae91106ee0fb326ffa5736f62ed2f7",
+      "full_label_sha256": "3943d4959ae977468c068729ddcd03028ce78b141682252f252afe48b3f6eea6",
+      "eroded_label_sha256": "1c241c1de9d2824de2bc99c78c5d9dccfa0b899ddf7e36678305863b0f3238c3",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-002/Vaihingen/dsm/dsm_09cm_matching_area26.tif"
+    },
+    {
+      "tile_id": 28,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-003/Vaihingen/top/top_mosaic_09cm_area28.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area28.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area28_noBoundary.tif",
+      "width": 1917,
+      "height": 2567,
+      "image_sha256": "ae380a7328d27e9f5ed29b7cbfb3bcdea1c3b3ab60ded8c2ef1280b0fa5b98cd",
+      "full_label_sha256": "902fb10e96795a0f063b280e4a9117e5fa82fbbf42dc6a53fcdbd17736b1f9d4",
+      "eroded_label_sha256": "4dbeed21fa13d967c5f09658038ae29f8e241359022301081b7092533142c159",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-002/Vaihingen/dsm/dsm_09cm_matching_area28.tif"
+    },
+    {
+      "tile_id": 32,
+      "split": "train",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area32.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_for_participants/top_mosaic_09cm_area32.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area32_noBoundary.tif",
+      "width": 1980,
+      "height": 2555,
+      "image_sha256": "d52bd2589ed1cb68e6167809dfd10f8dbec883f5d94d773834251a1bf5362946",
+      "full_label_sha256": "5398aa097f43135b2b16ed62550c806e937603253789269a634013b649d04ac1",
+      "eroded_label_sha256": "0078151fa3b372f5de570f8622a329aaa3ee36aeb991cdfb2d836353ef3cf3d2",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area32.tif"
+    },
+    {
+      "tile_id": 34,
+      "split": "validation",
+      "image_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/top/top_mosaic_09cm_area34.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area34.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area34_noBoundary.tif",
+      "width": 1388,
+      "height": 2555,
+      "image_sha256": "ecc4d371c93ac279c0e5b98d91ecad13a46bd4d78cee492d1b94fb40d759d352",
+      "full_label_sha256": "4b1e4387047f1ed8e6a2d002e6ef4092a47c338de19a94bd894111fa609cd33d",
+      "eroded_label_sha256": "6be66f2b40b2c52b14017767634ae36b806659c1dc463483df1463824606ee65",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area34.tif"
+    },
+    {
+      "tile_id": 37,
+      "split": "validation",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area37.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_for_participants/top_mosaic_09cm_area37.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area37_noBoundary.tif",
+      "width": 1996,
+      "height": 1995,
+      "image_sha256": "681887e9d0442665a9e68ed834bdf5dca20e0ee4de8dd18dc242758216be9907",
+      "full_label_sha256": "67abe58dc12d16107fa6483f0c82c4a11b52ac253d19a01a06f0cbcbf1fc0d3c",
+      "eroded_label_sha256": "a7d7b8929a1fed2e185b7ee4a82657125e4d057db9348a90a38db2f607a646f3",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area37.tif"
+    },
+    {
+      "tile_id": 5,
+      "split": "test",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area5.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_for_participants/top_mosaic_09cm_area5.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area5_noBoundary.tif",
+      "width": 1887,
+      "height": 2557,
+      "image_sha256": "14d2ce0b41ea5bd84b369f608fab4705c459477c2d4958bdeee4a06679295fa7",
+      "full_label_sha256": "00d1cb559a462f3bd127a903fdac86073195e3960a14b21e7b05f253c6506d51",
+      "eroded_label_sha256": "e6bf0448d36e5a03bf87c4bbe5d69882e164afbb65c379cd815ad959f51c2523",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-002/Vaihingen/dsm/dsm_09cm_matching_area5.tif"
+    },
+    {
+      "tile_id": 15,
+      "split": "test",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area15.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area15.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area15_noBoundary.tif",
+      "width": 1919,
+      "height": 2565,
+      "image_sha256": "d6f61c72a97207cd38b58da77cf5bacd08f4d09e373bdd7098e8a092bc654a57",
+      "full_label_sha256": "40fc577b510c139591b6304148777bd402c5d623b439f3efd40f1dca23350480",
+      "eroded_label_sha256": "3e684791961392764889c744610408bf0b339f8f52ccb8e45da662c9f5d5af89",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area15.tif"
+    },
+    {
+      "tile_id": 21,
+      "split": "test",
+      "image_path": "Vaihingen-20261120T185129Z-1-003/Vaihingen/top/top_mosaic_09cm_area21.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_for_participants/top_mosaic_09cm_area21.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area21_noBoundary.tif",
+      "width": 1903,
+      "height": 2546,
+      "image_sha256": "701185b4f82c53e9fa8e41647b96e73ab59a4d27e94cc0ac06a088a3149d3cac",
+      "full_label_sha256": "d50a1c65109ee8229f267f69afb6af6b5f925919054eb4c58e18f2ea3336e524",
+      "eroded_label_sha256": "18347bd2dbd7e7a4821fc9b370402cf9f37539a536df809c38103dafd80475ce",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-002/Vaihingen/dsm/dsm_09cm_matching_area21.tif"
+    },
+    {
+      "tile_id": 30,
+      "split": "test",
+      "image_path": "Vaihingen-20261120T185129Z-1-002/Vaihingen/top/top_mosaic_09cm_area30.tif",
+      "full_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_for_participants/top_mosaic_09cm_area30.tif",
+      "eroded_label_path": "Vaihingen-20261120T185129Z-1-001/Vaihingen/gts_eroded_for_participants/top_mosaic_09cm_area30_noBoundary.tif",
+      "width": 1934,
+      "height": 2563,
+      "image_sha256": "dc29564dbe95cc1d8612795412b41c7f941be05d85d360d32f61b3ca5d922017",
+      "full_label_sha256": "1f4f1f129237b278588829e5f6e35ab765e01034d7b59befd306c0cb9b6df23b",
+      "eroded_label_sha256": "d0556069bedbbd575e550504e9980fa2033d448baced9970c79d097f082eaa92",
+      "dsm_path_optional": "Vaihingen-20261120T185129Z-1-001/Vaihingen/dsm/dsm_09cm_matching_area30.tif"
+    }
+  ]
+}
