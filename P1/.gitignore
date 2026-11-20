@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+local_outputs/
+reports/full16_v1/progress_sections.txt
+reports/full16_v1/handoff_report.html

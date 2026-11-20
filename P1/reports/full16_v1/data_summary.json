@@ -1,0 +1,146 @@
+{
+  "original_image_tiles_checked": 33,
+  "matched_labeled_tiles_checked": 16,
+  "local_reference_archive_matches": 32,
+  "split_id": "vaihingen_full16_v1",
+  "partitions": {
+    "train": [
+      1,
+      3,
+      7,
+      11,
+      13,
+      17,
+      23,
+      26,
+      28,
+      32
+    ],
+    "validation": [
+      34,
+      37
+    ],
+    "test": [
+      5,
+      15,
+      21,
+      30
+    ]
+  },
+  "class_support": {
+    "train": {
+      "full": {
+        "class_pixels": {
+          "0": 14799970,
+          "1": 12810148,
+          "2": 10520768,
+          "3": 11678096,
+          "4": 682390,
+          "5": 518900
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "eroded": {
+        "class_pixels": {
+          "0": 13431865,
+          "1": 11988921,
+          "2": 9336962,
+          "3": 10491700,
+          "4": 460990,
+          "5": 489751
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "validation": {
+      "full": {
+        "class_pixels": {
+          "0": 1711776,
+          "1": 1825957,
+          "2": 2387419,
+          "3": 1558183,
+          "4": 45025,
+          "5": 0
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      },
+      "eroded": {
+        "class_pixels": {
+          "0": 1530773,
+          "1": 1713117,
+          "2": 2152654,
+          "3": 1373068,
+          "4": 30433,
+          "5": 0
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ]
+      }
+    },
+    "test": {
+      "full": {
+        "class_pixels": {
+          "0": 5303603,
+          "1": 5781227,
+          "2": 3364730,
+          "3": 4874159,
+          "4": 218272,
+          "5": 7183
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      "eroded": {
+        "class_pixels": {
+          "0": 4804365,
+          "1": 5422947,
+          "2": 2902710,
+          "3": 4392760,
+          "4": 148677,
+          "5": 6216
+        },
+        "classes_with_gt_pixels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    }
+  },
+  "implementation_status": "Audit and split artifacts completed; executable preprocessing/data loading and final-training integration pending",
+  "reviewed_repository_commit": "3f27b5c549079ada6135ad6405b62a4ee69cfe71"
+}

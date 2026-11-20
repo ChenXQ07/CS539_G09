@@ -1,0 +1,41 @@
+<!doctype html><html lang='en'><meta charset='utf-8'><title>Complete Vaihingen bundle inspection</title>
+<style>body{font:17px system-ui;max-width:1150px;margin:40px auto;padding:0 24px;color:#193047}p{line-height:1.6}table{border-collapse:collapse;width:100%;margin:20px 0}td,th{padding:10px;border:1px solid #ccd5de;text-align:left}th{background:#eef3f7}</style>
+<h1>Inspection of the new Data folder</h1>
+<p>Files are spread across three complementary export fragments. The image set contains 33 distinct original tiles. 16 labeled triples pass dimension, palette and nonboundary reference-consistency checks.</p>
+<p>The earlier missing-imagery finding applied to the old directory. The new directory supports the proposal's 16-labeled-tile experiment. The six-tile split is preserved but should not be mistaken for a mandatory data limit.</p>
+<h2>Available inputs</h2><table><tr><th>Folder</th><th>Image files</th><th>Distinct tile IDs</th></tr>
+<tr><td>ISPRS Vaihingen (nDSM from Markus Gerke)</td><td>33</td><td>33</td></tr>
+<tr><td>V_merge</td><td>16</td><td>16</td></tr>
+<tr><td>Vaihingen</td><td>1</td><td>0</td></tr>
+<tr><td>dsm</td><td>33</td><td>33</td></tr>
+<tr><td>gts_eroded_for_participants</td><td>16</td><td>16</td></tr>
+<tr><td>gts_for_participants</td><td>17</td><td>16</td></tr>
+<tr><td>gts_noise_forparticipants</td><td>16</td><td>16</td></tr>
+<tr><td>ndsm</td><td>33</td><td>33</td></tr>
+<tr><td>predict</td><td>33</td><td>33</td></tr>
+<tr><td>sam_augmented</td><td>16</td><td>16</td></tr>
+<tr><td>sam_augmented_4c</td><td>16</td><td>16</td></tr>
+<tr><td>sam_augmented_4c_512</td><td>16</td><td>16</td></tr>
+<tr><td>sam_augmented_masks</td><td>16</td><td>16</td></tr>
+<tr><td>sam_boundary_merge</td><td>16</td><td>16</td></tr>
+<tr><td>top</td><td>33</td><td>33</td></tr>
+</table><h2>Verified labeled tile pairings</h2><table><tr><th>Tile</th><th>Size W × H</th><th>Status</th><th>Full vs eroded differences on valid pixels</th></tr>
+<tr><td>1</td><td>[1919, 2569]</td><td>pass</td><td>0</td></tr>
+<tr><td>3</td><td>[2006, 3007]</td><td>pass</td><td>0</td></tr>
+<tr><td>5</td><td>[1887, 2557]</td><td>pass</td><td>0</td></tr>
+<tr><td>7</td><td>[1887, 2557]</td><td>pass</td><td>0</td></tr>
+<tr><td>11</td><td>[1893, 2566]</td><td>pass</td><td>0</td></tr>
+<tr><td>13</td><td>[2818, 2558]</td><td>pass</td><td>0</td></tr>
+<tr><td>15</td><td>[1919, 2565]</td><td>pass</td><td>0</td></tr>
+<tr><td>17</td><td>[2336, 1281]</td><td>pass</td><td>0</td></tr>
+<tr><td>21</td><td>[1903, 2546]</td><td>pass</td><td>0</td></tr>
+<tr><td>23</td><td>[1903, 2546]</td><td>pass</td><td>0</td></tr>
+<tr><td>26</td><td>[2995, 1783]</td><td>pass</td><td>0</td></tr>
+<tr><td>28</td><td>[1917, 2567]</td><td>pass</td><td>0</td></tr>
+<tr><td>30</td><td>[1934, 2563]</td><td>pass</td><td>0</td></tr>
+<tr><td>32</td><td>[1980, 2555]</td><td>pass</td><td>0</td></tr>
+<tr><td>34</td><td>[1388, 2555]</td><td>pass</td><td>0</td></tr>
+<tr><td>37</td><td>[1996, 1995]</td><td>pass</td><td>0</td></tr>
+</table><h2>Auxiliary products</h2><p>DSM files provide floating-point height-related inputs. JPEG nDSM products cannot be treated as calibrated physical heights without documentation. SAM folders contain stored image/mask products, but do not establish a separate executed neural component or a reproducible generation method.</p>
+<h2>Versioning</h2><p>No source data, training configuration or frozen split was modified. A full-data split should be saved as a new version if adopted.</p>
+<p><a href='bundle_summary.json'>Detailed inspection evidence</a> · <a href='labeled_tile_manifest.csv'>Paired labeled tile manifest</a> · <a href='file_inventory.csv'>File inventory</a></p></html>

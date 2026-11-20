@@ -1,0 +1,26 @@
+{
+  "input_channels": [
+    "near_infrared",
+    "red",
+    "green"
+  ],
+  "image_scaling": "uint8 / 255 -> float32 in [0, 1]",
+  "training_reference": "full_label_path",
+  "eroded_reference": "eroded_label_path",
+  "class_ids": {
+    "0": "impervious_surfaces",
+    "1": "buildings",
+    "2": "low_vegetation",
+    "3": "trees",
+    "4": "cars",
+    "5": "clutter_background"
+  },
+  "planned_ignore_index": 255,
+  "training_crop_size": [
+    256,
+    256
+  ],
+  "planned_augmentation": "Synchronized horizontal and vertical flips on training images and labels only",
+  "validation_test": "Deterministic image/label handling; never update model parameters from these tiles",
+  "optional_height_input": "DSM paths are recorded for future workflow decisions; DSM/SAM products are not enabled as segmentation inputs here"
+}
