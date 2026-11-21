@@ -1,0 +1,53 @@
+{
+  "encoder_features": [
+    [
+      2,
+      64,
+      64,
+      64
+    ],
+    [
+      2,
+      128,
+      32,
+      32
+    ],
+    [
+      2,
+      256,
+      16,
+      16
+    ],
+    [
+      2,
+      512,
+      8,
+      8
+    ]
+  ],
+  "local_outputs_deep_to_shallow": [
+    [
+      2,
+      64,
+      8,
+      8
+    ],
+    [
+      2,
+      64,
+      16,
+      16
+    ],
+    [
+      2,
+      64,
+      32,
+      32
+    ]
+  ],
+  "encoder_gradients": true,
+  "local_parameter_update": true,
+  "initialization": "weights=None",
+  "data": "synthetic",
+  "limitation": "test adapters; no global/shared decoder or segmentation accuracy"
+}

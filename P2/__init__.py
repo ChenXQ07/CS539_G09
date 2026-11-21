@@ -1,1 +1,1 @@
-"""Interchangeable ResNet-18 encoders for UNetFormer."""
+"""ResNet-18 feature encoders for the segmentation model."""

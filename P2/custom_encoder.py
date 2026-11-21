@@ -2,7 +2,10 @@
 
 from torch import nn
 
-from .._contract import validate_input, validate_weights
+if __package__:
+    from ._contract import validate_input, validate_weights
+else:
+    from _contract import validate_input, validate_weights
 
 
 class BasicBlock(nn.Module):
